@@ -14,26 +14,27 @@ The code of NOS-CARMICHAEL SPELL has been writed for haskell in this repository.
 
   - Encrypt
   
-  m = powMod m e n = mc
+    m = powMod m e n = mc
 
   - Descrypt
 
-  mc = powMod
+    mc = powMod
   
 - Some known things
 
-p^2 mod 6 = 1
+  p^2 mod 6 = 1
 
-N^2 = x6+1 * y6+1
+  N^2 = x6+1 * y6+1
 
-Totient = N - (sum factors) - 1
+  Totient = N - (sum factors) - 1
 
-totiend mod carmichael = 0
+  totient mod carmichael = 0
 
-period T = powMod 10 T N = 1
+  period T = powMod 10 T N = 1
 
-carmichael(n) mod T(n) = 0
-totient(n) mod T(n) = 0
+  carmichael(n) mod T(n) = 0
+  
+  totient(n) mod T(n) = 0
 
 
 # Spells logics
