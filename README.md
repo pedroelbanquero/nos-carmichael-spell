@@ -1,4 +1,4 @@
-# rsavsfactorization2
+# rsa vs factorization
 
 PRETTY IMAGEN GRAPH MODULOS VS TIME
 
@@ -121,7 +121,7 @@ t = times of decimal expansion length
 
 All semiprimes who have the same proportion n - sum factors in n^2 are really more easy to calculate a private key to decrypt a message.
 
-Many keys are vulnerable with just one operation to solve the cypher message, and some operations more to factorize the number. Just some seconds to get keys of 512, 1024 or 2048 bits vulnerables to NOS CARMICHAEL BYPASS
+Many keys are vulnerable with just one operation to solve the cypher message, and some operations more to factorize the number. Just some seconds to get keys of 512, 1024 or 2048 bits vulnerables to NOS CARMICHAEL SPELL
 
 # Author
 
