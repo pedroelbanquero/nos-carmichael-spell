@@ -35,32 +35,39 @@ import Math.NumberTheory.Powers.Squares
 --npe n = (n^2-1)*8 
 --sqrdif p = p^2*p^2 - (p^2+p^2 - p^2) 
 --sqrdif p = p^2 - 1
-ncs n = n^2*n^2 - n^2 
+--ncs n = n^2*n^2 - n^2 
 --sqrdif4 n = n^2*n^2 - (n-1)    
 --sqrdif2 n s = (n^2 -  s)   
 
+-- COMPUTE CARMICHAEL DERIVATION
+
+ncs_derivate n s = n^2*n^2 - n^2 + s
+
+-- EXTRACT PRIVATE KEY WITH EXPONEN ANT N IN NCS NUMBERS 
+
+ncs_privatekey e n s= modular_inverse e (ncs_derivate n s)
 
 -- CRACK LOOP WITH NCS
+
 ncs_crack n s l
 	| ch == 0 = sq
 	| l ==s = 0
 	| otherwise = ncs_crack n (s+1) l
 	where
-		sq = sqrdif2 n (s+1)
+		sq = ncs_derivate n (s+1)
 		ch = tryperiod n sq
 
 
 -- MAP NCS PRODUCT OF PRIMES
-ncs_map s x = map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (ncs x))) ([2^s..2^s+x]))
+ncs_map s x = map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (ncs_derivate x s))) ([2^s..2^s+x]))
 
-ncs_factors n c 
-	| gcdtry /= 1 && gcdtry /= n = gcdtry
-	| otherwise = ncs_factors n (ds2) 
-	where
-	dat = (reverse (divs c))
-	ds = head dat
-	ds2 = head (tail dat)
-	gcdtry = gcd n (ds+1)
+ncs_find nbits range = take 1 $ filter ((v,x)->length x==2) (map (\x-> (x,P.factorise x)) (ncs_map (nbits) range))
+
+
+-- FACTORIZE WITH N AND (TOTIENT OR CARMICHAEL OR PERIOD)
+ncs_factors n t = (head (take 1 $ filter (\x->  gcd n (x+1)/=1 ) (tail (reverse (divs t))))+1)
+ncs_fac n t = (ncs_factors n t, div n (ncs_factors n t) )
+
 
 -- CHECK PERIOD LENGTH FOR N
 tryperiod n period = (powMod (powMod (2) 65537 n) (modular_inverse 65537 period) n) - (2) 
@@ -71,10 +78,18 @@ divs n = read $ concat (tail (splitOn " " (show (divisors n))))::[Integer]
 -- GET SUM OF FACTORS
 ncs_sum_factors_pow n = integerSquareRootRem n
 
--- GET PERIOD OF N IF N is NCS
---ncs_period =
---
--- period n =
+-- DECIMAL EXPANSION, THE PERIOD
+-- ncs decimal expansion for NCS numbers.
+
+--ncs_period = 
+
+
+-- Decimal expansion length , the period, in a ECM method fast calculation
+ncsecm_period n= fst ( (take 1 $ filter (\(x,y)-> y==1) $ map (\x -> (x,powMod 10 x n) ) ( tail (reverse (divs (carmichael n))) ) ) !! 0)
+
+-- Decimal expansion in a traditional slow way
+period n = (length (takeWhile (/=1) $ map (\x -> powMod 10 x n ) ( tail [0,1..n])) ) +1
+
 
 
 
