@@ -4,9 +4,15 @@ PRETTY IMAGEN GRAPH MODULOS VS TIME
 
 # PRIME PERIOD GRIMOIRE VOL. 2
 
-The present document try to probe how rsa is more easy to solve than factorizacion of semiprimes, the important part of the public key. 
+The present document try to probe how rsa is more easy to solve than factorizacion of semiprimes, the important part of the public key. with the NCS method (nos-carmichael spell)
 
-The code of NOS-CARMICHAEL SPELL has been writed for haskell in this repository.
+The NCS method is a efficient way to calculate the N decimal expansion.
+
+The NCS method allow you to calculate the sum of factors in a efficient way, without knowing the prime factors, when de semi primes are NOS semiprimes.
+
+The NCS method improves factorization methods for the most of small numbers and a big percentage of big numbers.
+
+The code of NOS-CARMICHAEL SPELL has been writed in haskell language.
 
 ## Grimoire basis spells
 
@@ -35,6 +41,8 @@ The code of NOS-CARMICHAEL SPELL has been writed for haskell in this repository.
   carmichael(n) mod T(n) = 0
   
   totient(n) mod T(n) = 0
+  
+  x^2-y^2 mod N = 0
 
 
 # Spells logics
@@ -42,6 +50,8 @@ The code of NOS-CARMICHAEL SPELL has been writed for haskell in this repository.
 Any number can be represented by 
 
 N = time * period + (sum factors N) - 1
+
+Nos semiprimes are de product of primes who 
 
 Deduction of a perfect prime square
 
@@ -62,7 +72,6 @@ Then
 t = times of decimal expansion length
 
 ( (sqrt x6+1)* (sqrt y6+1) ) - ((sqrt 6x+1) + (sqrt y6+1)) +1 = t * T -> Solution rsa
-
 
 p^2 - p mod T = 0
 
