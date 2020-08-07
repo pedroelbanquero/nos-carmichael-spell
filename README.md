@@ -76,8 +76,50 @@ t = times of decimal expansion length
 p^2 - p mod T = 0
 
 
-# Writing the spells in the magic book
+# Conjure spells
 
+
+````
+
+-- Execute ncs carmichael derivation
+ncs n = n^2*n^2 - n^2 
+
+-- Extract private key exponent 
+
+ncs_privatekey e n = modular_inverse e n
+
+-- CRACK LOOP WITH NCS
+ncs_crack n s l
+	| ch == 0 = sq
+	| l ==s = 0
+	| otherwise = ncs_crack n (s+1) l
+	where
+		sq = sqrdif2 n (s+1)
+		ch = tryperiod n sq
+
+
+-- MAP NCS PRODUCT OF PRIMES
+ncs_map s x = map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (ncs x))) ([2^s..2^s+x]))
+
+ncs_factors n c 
+	| gcdtry /= 1 && gcdtry /= n = gcdtry
+	| otherwise = ncs_factors n (ds2) 
+	where
+	dat = (reverse (divs c))
+	ds = head dat
+	ds2 = head (tail dat)
+	gcdtry = gcd n (ds+1)
+
+-- CHECK PERIOD LENGTH FOR N
+tryperiod n period = (powMod (powMod (2) 65537 n) (modular_inverse 65537 period) n) - (2) 
+
+-- GET DIVISORS WITH ECM METHOD
+divs n = read $ concat (tail (splitOn " " (show (divisors n))))::[Integer]
+
+
+
+
+````
 
 
 
