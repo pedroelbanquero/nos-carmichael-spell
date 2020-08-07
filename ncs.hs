@@ -59,13 +59,16 @@ ncs_crack n s l
 
 
 -- MAP NCS PRODUCT OF PRIMES
-ncs_map s x = map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (ncs_derivate x s))) ([2^s..2^s+x]))
+ncs_map s x r= map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (ncs_derivate x r))) ([2^s..2^s+x]))
 
-ncs_find nbits range = take 1 $ filter ((v,x)->length x==2) (map (\x-> (x,P.factorise x)) (ncs_map (nbits) range))
+ncs_find nbits range = take 1 $ filter (\(v,x)-> length x==2) (map (\x-> (x,P.factorise x)) (ncs_map (nbits) range 0))
+
 
 
 -- FACTORIZE WITH N AND (TOTIENT OR CARMICHAEL OR PERIOD)
+
 ncs_factors n t = (head (take 1 $ filter (\x->  gcd n (x+1)/=1 ) (tail (reverse (divs t))))+1)
+
 ncs_fac n t = (ncs_factors n t, div n (ncs_factors n t) )
 
 
