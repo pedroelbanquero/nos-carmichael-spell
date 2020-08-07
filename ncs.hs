@@ -1,3 +1,5 @@
+--NOS CARMICHAEL SPELL v0.0.0.1
+
 module Ncs where
 
 import System.Environment
@@ -30,40 +32,50 @@ import Math.NumberTheory.Powers.Squares
 
 -- NOS CARMICHAEL SPELL FUNCTIONS
 
-npe n = (n^2-1)*8 
+--npe n = (n^2-1)*8 
+--sqrdif p = p^2*p^2 - (p^2+p^2 - p^2) 
+--sqrdif p = p^2 - 1
+ncs n = n^2*n^2 - n^2 
+--sqrdif4 n = n^2*n^2 - (n-1)    
+--sqrdif2 n s = (n^2 -  s)   
 
-mapprsqr2 s x = map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (npe x))) [2^s..2^s+x])
 
-sqrdif p = p^2*p^2 - (p^2+p^2 - p^2) 
-sqrdif p = p^2 - 1
-sqrdif3 n = n^2*n^2 - n^2 
-sqrdif4 n = n^2*n^2 - (n-1)    
-sqrdif2 n s = (n^2 -  s)   
-
-sqrcrack n s l
+-- CRACK LOOP WITH NCS
+ncs_crack n s l
 	| ch == 0 = sq
 	| l ==s = 0
-	| otherwise = sqrcrack n (s+1) l
+	| otherwise = ncs_crack n (s+1) l
 	where
 		sq = sqrdif2 n (s+1)
 		ch = tryperiod n sq
 
 
-mapprsqr s x = map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (sqrdif3 x))) ([2^s..2^s+x]))
+-- MAP NCS PRODUCT OF PRIMES
+ncs_map s x = map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (ncs x))) ([2^s..2^s+x]))
 
-fcar n c 
+ncs_factors n c 
 	| gcdtry /= 1 && gcdtry /= n = gcdtry
-	| otherwise = fcar n (ds2) 
+	| otherwise = ncs_factors n (ds2) 
 	where
 	dat = (reverse (divs c))
 	ds = head dat
 	ds2 = head (tail dat)
-	gcdtry = gcd n ( ds+1)
+	gcdtry = gcd n (ds+1)
 
-
+-- CHECK PERIOD LENGTH FOR N
 tryperiod n period = (powMod (powMod (2) 65537 n) (modular_inverse 65537 period) n) - (2) 
 
-
+-- GET DIVISORS WITH ECM METHOD
 divs n = read $ concat (tail (splitOn " " (show (divisors n))))::[Integer]
+
+-- GET SUM OF FACTORS
+ncs_sum_factors_pow n = integerSquareRootRem n
+
+-- GET PERIOD OF N IF N is NCS
+--ncs_period =
+--
+-- period n =
+
+
 
 
