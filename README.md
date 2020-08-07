@@ -39,6 +39,10 @@ The code of NOS-CARMICHAEL SPELL has been writed for haskell in this repository.
 
 # Spells logics
 
+Any number can be represented by 
+
+N = time * period + (sum factors N) - 1
+
 Deduction of a perfect prime square
 
 p^2 * p^2 = n^2
@@ -58,6 +62,9 @@ Then
 t = times of decimal expansion length
 
 ( (sqrt x6+1)* (sqrt y6+1) ) - ((sqrt 6x+1) + (sqrt y6+1)) +1 = t * T -> Solution rsa
+
+
+p^2 - p mod T = 0
 
 
 # Writing the spells in the magic book
