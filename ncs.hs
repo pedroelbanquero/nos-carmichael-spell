@@ -59,11 +59,18 @@ ncs_crack n s l
 
 
 -- MAP NCS PRODUCT OF PRIMES
+
+-- N bits mapping
+
 ncs_map s x r= map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (ncs_derivate x r))) ([2^s..2^s+x]))
 
-ncs_find nbits range = take 1 $ filter (\(v,x)-> length x==2) (map (\x-> (x,P.factorise x)) (ncs_map (nbits) range 0))
+-- N bits mapping checking with ECM just products of two primers
 
+ncs_find nbits range = take 1 $ filter (\(v,c)-> length c==2) (map (\x-> (x,P.factorise x)) (ncs_map (nbits) range 0))
 
+-- N bits mappingi without perfect squares or prime numers
+
+ncs_map_nsq s x =  filter (\(d)-> snd (integerSquareRootRem d) /= 0 ) (ncs_map s x 0) 
 
 -- FACTORIZE WITH N AND (TOTIENT OR CARMICHAEL OR PERIOD)
 
@@ -82,6 +89,7 @@ divs n = read $ concat (tail (splitOn " " (show (divisors n))))::[Integer]
 ncs_sum_factors_pow n = integerSquareRootRem n
 
 -- DECIMAL EXPANSION, THE PERIOD
+
 -- ncs decimal expansion for NCS numbers.
 
 --ncs_period = 
