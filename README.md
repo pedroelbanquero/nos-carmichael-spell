@@ -81,40 +81,60 @@ p^2 - p mod T = 0
 
 ````
 
--- Execute ncs carmichael derivation
-ncs n = n^2*n^2 - n^2 
+-- COMPUTE CARMICHAEL DERIVATION
 
--- Extract private key exponent 
+ncs_derivate n s = n^2*n^2 - n^2 + s
 
-ncs_privatekey e n = modular_inverse e n
+-- EXTRACT PRIVATE KEY WITH EXPONEN ANT N IN NCS NUMBERS 
+
+ncs_privatekey e n s= modular_inverse e (ncs_derivate n s)
 
 -- CRACK LOOP WITH NCS
+
 ncs_crack n s l
-	| ch == 0 = sq
-	| l ==s = 0
-	| otherwise = ncs_crack n (s+1) l
-	where
-		sq = sqrdif2 n (s+1)
-		ch = tryperiod n sq
+        | ch == 0 = sq
+        | l ==s = 0
+        | otherwise = ncs_crack n (s+1) l
+        where
+                sq = ncs_derivate n (s+1)
+                ch = tryperiod n sq
 
 
 -- MAP NCS PRODUCT OF PRIMES
-ncs_map s x = map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (ncs x))) ([2^s..2^s+x]))
+ncs_map s x r= map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (ncs_derivate x r))) ([2^s..2^s+x]))
 
-ncs_factors n c 
-	| gcdtry /= 1 && gcdtry /= n = gcdtry
-	| otherwise = ncs_factors n (ds2) 
-	where
-	dat = (reverse (divs c))
-	ds = head dat
-	ds2 = head (tail dat)
-	gcdtry = gcd n (ds+1)
+ncs_find nbits range = take 1 $ filter (\(v,x)-> length x==2) (map (\x-> (x,P.factorise x)) (ncs_map (nbits) range 0))
+
+
+
+-- FACTORIZE WITH N AND (TOTIENT OR CARMICHAEL OR PERIOD)
+
+ncs_factors n t = (head (take 1 $ filter (\x->  gcd n (x+1)/=1 ) (tail (reverse (divs t))))+1)
+
+ncs_fac n t = (ncs_factors n t, div n (ncs_factors n t) )
+
 
 -- CHECK PERIOD LENGTH FOR N
 tryperiod n period = (powMod (powMod (2) 65537 n) (modular_inverse 65537 period) n) - (2) 
 
 -- GET DIVISORS WITH ECM METHOD
 divs n = read $ concat (tail (splitOn " " (show (divisors n))))::[Integer]
+
+-- GET SUM OF FACTORS
+ncs_sum_factors_pow n = integerSquareRootRem n
+
+-- DECIMAL EXPANSION, THE PERIOD
+-- ncs decimal expansion for NCS numbers.
+
+--ncs_period = 
+
+
+-- Decimal expansion length , the period, in a ECM method fast calculation
+ncsecm_period n= fst ( (take 1 $ filter (\(x,y)-> y==1) $ map (\x -> (x,powMod 10 x n) ) ( tail (reverse (divs (carmichael n))) ) ) !! 0)
+
+-- Decimal expansion in a traditional slow way
+period n = (length (takeWhile (/=1) $ map (\x -> powMod 10 x n ) ( tail [0,1..n])) ) +1
+
 
 
 
