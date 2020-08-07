@@ -1,6 +1,6 @@
 # rsa vs factorization
 
-PRETTY IMAGEN GRAPH MODULOS VS TIME
+![Sum of factors](sum_divisors.png)
 
 # PRIME PERIOD GRIMOIRE VOL. 2
 
