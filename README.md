@@ -76,7 +76,8 @@ t = times of decimal expansion length
 p^2 - p mod T = 0
 
 
-# Writing the spells
+# Conjure spells
+
 
 ````
 
