@@ -179,6 +179,8 @@ The spell show how easy is solve more fast many numbers than factorization for d
 
 # Conclusion
 
+## nos carmichael spell numbers = N^2 * N^2 - N^2 mod T = 0
+
 All semiprimes who have the same proportion n - sum factors in n^2 are really more easy to calculate a private key to decrypt a message.
 
 Many keys are vulnerable with just one operation to solve the cypher message, and some operations more to factorize the number. Just some seconds to get keys of 512, 1024 or 2048 bits vulnerables to NOS CARMICHAEL SPELL
