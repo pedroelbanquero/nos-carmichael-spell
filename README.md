@@ -209,6 +209,14 @@ Many keys are vulnerable with just one operation to solve the cypher message, an
 Just some seconds to get keys of 512, 1024, 2048, 4096 bits vulnerables to NOS CARMICHAEL SPELL
 
 
+# License
+
+Free usage on Apache License 2.0 for non commercial uses
+
+To discuss with the team for commercial porpouses, you can send email to pedro@blackhole.consulting . 
+
+More information about our services in https://blackhole.consulting
+
 
 # Authors
 
