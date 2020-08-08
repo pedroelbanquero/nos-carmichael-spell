@@ -184,7 +184,7 @@ The spell show how easy is solve more fast many numbers than factorization for d
 
 # Conclusion
 
-## nos carmichael spell numbers = N^2 * N^2 - N^2 mod T = 0
+## Nos Carmichael Spell = N^2 * N^2 - N^2 mod T = 0
 
 All semiprimes who have the same proportion n - sum factors in n^2 are really more easy to calculate a private key to decrypt a message.
 
