@@ -202,7 +202,9 @@ All product of primes who have the same proportion n - sum factors in n^2 are re
 
 The spells proves what find and decrypt with a public key and nos carmichael spell is more fast than factorize just 1 of the numerbers, if you just want to decrypt a message you can use the nos carmichael spell if the number is vulnerable, just in 0.01 second vs 255 seconds to factorize the number with ECM parallel method.
 
-Clearly in trillions of cases you can decrypt or solve rsa really more fast than factorization fastest methods GNFS or ECM when (p * q) are N^2 * N^2 - N^2 mod T = 0
+Clearly in trillions of cases you can decrypt or solve rsa really more fast than factorization fastest methods GNFS or ECM when (p * q) are
+
+N^2 * N^2 - N^2 mod T = 0
 
 Many keys are vulnerable with just one operation to solve the cypher message, and some operations more to factorize the number if you can factorize NCS derivation . 
 
