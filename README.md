@@ -4,11 +4,11 @@
 
 # PRIME PERIOD GRIMOIRE VOL. 2
 
-The present document try to probe how rsa is more easy to solve than factorizacion of semiprimes, the important part of the public key. with the NCS method (nos-carmichael spell)
+The present document try to probe how rsa is more easy to solve than factorizacion of semiprimes, with the NCS method (nos-carmichael spell)
 
-The NCS method is a efficient way to calculate the N decimal expansion.
+The NCS method is a efficient way to calculate the N decimal expansion, for semiprimes
 
-The NCS method allow you to calculate the sum of factors in a efficient way, without knowing the prime factors, when de semi primes are NOS semiprimes.
+The NCS method allow you to calculate the sum of factors in a efficient way, without knowing the prime factors, when de semi primes are NCS semiprimes.
 
 The NCS method improves factorization methods for the most of small numbers and a big percentage of big numbers.
 
