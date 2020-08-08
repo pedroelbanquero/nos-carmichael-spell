@@ -1,4 +1,4 @@
-# rsa vs factorization
+# nos carmichael spell
 
 ![Sum of factors](sum_divisors.png)
 
