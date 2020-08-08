@@ -206,8 +206,14 @@ Clearly in trillions of cases you can decrypt or solve rsa really more fast than
 
 Many keys are vulnerable with just one operation to solve the cypher message, and some operations more to factorize the number. Just some seconds to get keys of 512, 1024 or 2048 bits vulnerables to NOS CARMICHAEL SPELL
 
+
+
 # Authors
 
 Main Author - Vicent Nos Ripolles
-...
+
+TODO - Revisado y corregido por Francisco Blas Izquierdo
+
+TODO - Revision Manuel Mollar
+
 
