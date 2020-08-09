@@ -1,18 +1,18 @@
-# nos carmichael spell
+# nos santos spell
 
 ![Sum of factors](sum_divisors.png)
 
 # PRIME PERIOD GRIMOIRE VOL. 2
 
-The present document try to probe how rsa is more easy to solve than factorizacion of semiprimes, with the NCS method (nos-carmichael spell)
+The present document try to probe how rsa is more easy to solve than factorizacion of semiprimes, with the NSS method (nos-santos spell)
 
-The NCS method is a efficient way to calculate the N decimal expansion, for semiprimes .
+The NSS method is a efficient way to calculate the N decimal expansion, for semiprimes .
 
-The NCS method allow you to calculate the sum of factors in a efficient way, without knowing the prime factors, when de product of primes are NCS.
+The NSS method allow you to calculate the sum of factors in a efficient way, without knowing the prime factors, when de product of primes are NSS.
 
-The NCS method improves factorization methods for the most of small numbers and a big percentage of big numbers.
+The NSS method improves factorization methods for the most of small numbers and a big percentage of big numbers.
 
-The code of NOS-CARMICHAEL SPELL has been writed in haskell language.
+The code of NOS-SANTOS SPELL has been writed in haskell language.
 
 ## Grimoire basis spells
 
@@ -96,11 +96,11 @@ n^2 -1 mod T = 0
 
 ncs_derivate n s = n^2*n^2 - n^2 + s
 
--- EXTRACT PRIVATE KEY WITH EXPONEN ANT N IN NCS NUMBERS 
+-- EXTRACT PRIVATE KEY WITH EXPONEN ANT N IN NSS NUMBERS 
 
 ncs_privatekey e n s= modular_inverse e (ncs_derivate n s)
 
--- CRACK LOOP WITH NCS
+-- CRACK LOOP WITH NSS
 
 ncs_crack n s l
         | ch == 0 = sq
@@ -111,13 +111,13 @@ ncs_crack n s l
                 ch = tryperiod n sq
 
 
--- MAP NCS PRODUCT OF PRIMES
+-- MAP NSS PRODUCT OF PRIMES
 
--- NCS map
+-- NSS map
 
 ncs_map s x r= map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (ncs_derivate x r))) ([2^s..2^s+x]))
 
--- NCS map check with ECM
+-- NSS map check with ECM
 
 ncs_find nbits range to = take to $ filter (\(v,c)-> length c==2) (map (\x-> (x,P.factorise x)) (ncs_map (nbits) range 0))
 
@@ -133,7 +133,7 @@ ncs_factorise_ecm n = (sg2-qrest, sg2+qrest)
 	sg2 = div sigma 2   
 	qrest = integerSquareRoot ((sg2^2)-n)
 
-TODO NCS_FACTORISE
+TODO NSS_FACTORISE
 
 -- CHECK PERIOD LENGTH FOR N
 tryperiod n period = (powMod (powMod (2) 65537 n) (modular_inverse 65537 period) n) - (2) 
@@ -144,11 +144,11 @@ divs n = read $ concat (tail (splitOn " " (show (divisors n))))::[Integer]
 -- GET SUM OF FACTORS WITH ECM
 ncs_sum_factors_ecm n = n + 1 - (totient n) 
 
-todo NCS
+todo NSS
 
 
 -- DECIMAL EXPANSION, THE PERIOD
--- ncs decimal expansion for NCS numbers.
+-- ncs decimal expansion for NSS numbers.
 
 --ncs_period = 
 
