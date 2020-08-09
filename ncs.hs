@@ -41,11 +41,28 @@ import Math.NumberTheory.Powers.Squares
 
 -- COMPUTE CARMICHAEL DERIVATION
 
-ncs_derivate n s = n^2*n^2 - n^2 + s
+--ncs_derivate n s = n^2 - 1 + s
+
+ncs_derivate n s = n^(2) -1  +s
 
 -- EXTRACT PRIVATE KEY WITH EXPONEN ANT N IN NCS NUMBERS 
 
 ncs_privatekey e n s= modular_inverse e (ncs_derivate n s)
+
+-- EXTRACT FACTORS in NCS numbers
+
+ncs_factorise_ecm n = (sg2-qrest, sg2+qrest) 
+	where
+	sigma = (n+1)-(totient n)
+	sg2 = div sigma 2   
+	qrest = integerSquareRoot ((sg2^2)-n)
+
+ncs_factorise n = (sg2-qrest, sg2+qrest) 
+	where
+	sigma = (n+1)^2-(ncs_derivate n 0)
+	sg2 = div sigma 2   
+	qrest = integerSquareRoot ((sg2^2)-n)
+
 
 -- CRACK LOOP WITH NCS
 
@@ -66,27 +83,34 @@ ncs_map s x r= map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (ncs_d
 
 -- N bits mapping checking with ECM just products of two primers
 
-ncs_find nbits range = take 1 $ filter (\(v,c)-> length c==2) (map (\x-> (x,P.factorise x)) (ncs_map (nbits) range 0))
+ncs_find nbits range to = take to $ filter (\(v,c)-> length c==2) (map (\x-> (x,P.factorise x)) (ncs_map (nbits) range 0))
 
--- N bits mappingi without perfect squares or prime numers
+-- N bits mappingi without perfect squares or prime numers really slow checking primes, delete for faster mapping, pending chage to a fast comprobation 
 
 ncs_map_nsq s x =  filter (\(d)-> snd (integerSquareRootRem d) /= 0 ) (ncs_map s x 0) 
 
 -- FACTORIZE WITH N AND (TOTIENT OR CARMICHAEL OR PERIOD)
 
-ncs_factors n t = (head (take 1 $ filter (\x->  gcd n (x+1)/=1 ) (tail (reverse (divs t))))+1)
+ncs_factors n t = (head (take 1 $ filter (\x->  gcd n (x+1)/=1 ) (tail (reverse (divs (fst (integerSquareRootRem t))))))+1)
 
-ncs_fac n t = (ncs_factors n t, div n (ncs_factors n t) )
+ncs_fac n t = (ncs_factors n t, gcd n (ncs_factors n t) )
+
+
+ncsfactors n = (div n gcds, gcds)
+	where
+	gcds = gcd n $ fst (integerSquareRootRem ((2^n  - 1)))
+
 
 
 -- CHECK PERIOD LENGTH FOR N
-tryperiod n period = (powMod (powMod (2) 65537 n) (modular_inverse 65537 period) n) - (2) 
+tryperiod n period = (powMod (powMod (2) 1826379812379156297616109238798712634987623891298419 n) (modular_inverse 1826379812379156297616109238798712634987623891298419 period) n) - (2) 
 
 -- GET DIVISORS WITH ECM METHOD
 divs n = read $ concat (tail (splitOn " " (show (divisors n))))::[Integer]
 
--- GET SUM OF FACTORS
-ncs_sum_factors_pow n = integerSquareRootRem n
+-- GET SUM OF FACTORS WITH ECM
+ncs_sum_factors_pow n = n + 1 - (totient n) 
+
 
 -- DECIMAL EXPANSION, THE PERIOD
 
