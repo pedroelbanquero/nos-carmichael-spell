@@ -218,7 +218,7 @@ The spell show how easy is solve more fast many numbers than factorization for d
 
 # Conclusion
 
-## N^2 * N^2 - N^2 mod T = 0
+## n^2 - 1 mod T = 0
 
 All product of primes who have the same proportion n - sum factors in n^2 are really more easy to calculate a private key to decrypt a message.
 
@@ -226,7 +226,7 @@ The spells proves what find and decrypt with a public key and nos carmichael spe
 
 Clearly in trillions of cases you can decrypt or solve rsa really more fast than factorization fastest methods GNFS or ECM when (p * q) are
 
-N^2 * N^2 - N^2 mod T = 0
+n^2 - 1 mod T = 0
 
 Many keys are vulnerable with just one operation to solve the cypher message, and some operations more to factorize the number if you can factorize NCS derivation . 
 
