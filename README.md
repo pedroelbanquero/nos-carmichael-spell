@@ -16,6 +16,8 @@ The code of NOS-CARMICHAEL SPELL has been writed in haskell language.
 
 ## Grimoire basis spells
 
+This spells are from famouths maths geeks, like fermat and others
+
 - Rsa problem 
 
   - Encrypt
@@ -74,6 +76,15 @@ t = times of decimal expansion length
 ( (sqrt x6+1)* (sqrt y6+1) ) - ((sqrt 6x+1) + (sqrt y6+1)) +1 = t * T -> Solution rsa
 
 p^2 - p mod T = 0
+
+Then in squares or numbers with square proportion
+
+N^2+N^2 - N^2  mod T = 0
+
+or 
+
+n^2 -1 mod T = 0 
+
 
 
 # Conjure spells
