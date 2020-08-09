@@ -6,9 +6,9 @@
 
 The present document try to probe how rsa is more easy to solve than factorizacion of semiprimes, with the NCS method (nos-carmichael spell)
 
-The NCS method is a efficient way to calculate the N decimal expansion, for semiprimes
+The NCS method is a efficient way to calculate the N decimal expansion, for semiprimes .
 
-The NCS method allow you to calculate the sum of factors in a efficient way, without knowing the prime factors, when de semi primes are NCS semiprimes.
+The NCS method allow you to calculate the sum of factors in a efficient way, without knowing the prime factors, when de product of primes are NCS.
 
 The NCS method improves factorization methods for the most of small numbers and a big percentage of big numbers.
 
@@ -109,10 +109,13 @@ ncs_find nbits range = take 1 $ filter (\(v,x)-> length x==2) (map (\x-> (x,P.fa
 
 -- FACTORIZE WITH N AND (TOTIENT OR CARMICHAEL OR PERIOD)
 
-ncs_factors n t = (head (take 1 $ filter (\x->  gcd n (x+1)/=1 ) (tail (reverse (divs t))))+1)
+ncs_factorise_ecm n = (sg2-qrest, sg2+qrest) 
+	where
+	sigma = (n+1)-(totient n)
+	sg2 = div sigma 2   
+	qrest = integerSquareRoot ((sg2^2)-n)
 
-ncs_fac n t = (ncs_factors n t, div n (ncs_factors n t) )
-
+TODO NCS_FACTORISE
 
 -- CHECK PERIOD LENGTH FOR N
 tryperiod n period = (powMod (powMod (2) 65537 n) (modular_inverse 65537 period) n) - (2) 
@@ -120,8 +123,11 @@ tryperiod n period = (powMod (powMod (2) 65537 n) (modular_inverse 65537 period)
 -- GET DIVISORS WITH ECM METHOD
 divs n = read $ concat (tail (splitOn " " (show (divisors n))))::[Integer]
 
--- GET SUM OF FACTORS
-ncs_sum_factors_pow n = integerSquareRootRem n
+-- GET SUM OF FACTORS WITH ECM
+ncs_sum_factors_ecm n = n + 1 - (totient n) 
+
+todo NCS
+
 
 -- DECIMAL EXPANSION, THE PERIOD
 -- ncs decimal expansion for NCS numbers.
@@ -207,6 +213,21 @@ N^2 * N^2 - N^2 mod T = 0
 Many keys are vulnerable with just one operation to solve the cypher message, and some operations more to factorize the number if you can factorize NCS derivation . 
 
 Just some seconds to get keys of 512, 1024, 2048, 4096 bits vulnerables to NOS CARMICHAEL SPELL
+
+# Considerations before use the library
+
+This paper is experimental, a big challenage is comming yet to find what is s in ncs derivate n s, for now jus works with NCS numbers, yo can get a idea of the proportion of NCS numbers to a no NCS numbers looking this map .
+
+To make test use a 0 value fos s .
+
+the first paramenter in the function is the starter point to map in 2^ parameter , you can see in casting spells section. The second parameter is how many numbers you want to get after 2^parameter. 
+
+ncs_map_nsq 2 1000 
+
+[5,6,7,11,13,14,15,17,19,23,29,31,35,37,39,41,43,47,51,53,55,57,59,61,65,66,67,69,71,73,79,83,85,89,91,95,97,101,102,103,107,109,113,119,127,131,133,137,139,147,149,151,153,154,157,159,163,167,173,179,181,185,191,193,197,199,209,211,221,223,227,229,233,239,241,247,251,255,257,258,263,269,271,275,277,281,283,286,293,307,311,313,317,323,325,327,331,337,341,347,349,353,355,357,359,365,367,370,373,377,379,381,383,389,397,401,409,419,421,426,431,433,434,435,439,443,449,451,455,457,461,463,467,479,481,487,491,493,499,503,509,511,521,523,541,545,546,547,557,559,561,563,569,571,577,587,593,595,599,601,607,613,617,619,629,631,635,641,643,645,647,653,659,661,665,670,671,673,674,677,679,683,687,691,701,703,709,719,723,727,733,739,743,751,755,757,761,765,769,773,787,797,806,809,811,819,821,823,827,829,839,853,857,859,861,863,866,867,869,871,877,881,883,887,901,907,911,919,923,929,935,937,941,946,947,953,967,971,977,983,991,997,1001]
+
+All this numbers + prime sqqueares are are the NCS numbers among 2^2 and 2^2+100
+
 
 
 # License
