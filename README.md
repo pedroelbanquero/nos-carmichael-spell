@@ -101,11 +101,18 @@ ncs_crack n s l
 
 
 -- MAP NCS PRODUCT OF PRIMES
+
+-- NCS map
+
 ncs_map s x r= map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (ncs_derivate x r))) ([2^s..2^s+x]))
 
-ncs_find nbits range = take 1 $ filter (\(v,x)-> length x==2) (map (\x-> (x,P.factorise x)) (ncs_map (nbits) range 0))
+-- NCS map check with ECM
 
+ncs_find nbits range to = take to $ filter (\(v,c)-> length c==2) (map (\x-> (x,P.factorise x)) (ncs_map (nbits) range 0))
 
+-- N bits mappingig without perfect squares 
+
+ncs_map_nsq s x =  filter (\(d)-> snd (integerSquareRootRem d) /= 0 ) (ncs_map s x 0) 
 
 -- FACTORIZE WITH N AND (TOTIENT OR CARMICHAEL OR PERIOD)
 
