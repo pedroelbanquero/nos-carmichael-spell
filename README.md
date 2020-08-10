@@ -266,7 +266,11 @@ Many keys are vulnerable with just one operation to solve the cypher message, an
 
 Just some seconds to get keys of 512, 1024, 2048, 4096 bits vulnerables to NOS CARMICHAEL SPELL
 
-## General Number Field Conjeture
+Small number than carmichael to decrypt can be calculated 
+
+## lcm T1 T2
+
+# General Number Field Conjeture
 
 All numbers can be classified in two types, numbers who:
 
