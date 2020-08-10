@@ -276,21 +276,6 @@ All numbers can be classified in two types, numbers who:
 
 
 
-# Considerations before use the library
-
-This paper is experimental, a big challenage is comming yet to find what is s in nss derivate n s, for now jus works with NSS numbers, yo can get a idea of the proportion of NSS numbers to a no NSS numbers looking this map .
-
-To make test use a 0 value fos s .
-
-the first paramenter in the function is the starter point to map in 2^ parameter , you can see in casting spells section. The second parameter is how many numbers you want to get after 2^parameter. 
-
-nss_map_nsq 2 1000 
-
-[5,6,7,11,13,14,15,17,19,23,29,31,35,37,39,41,43,47,51,53,55,57,59,61,65,66,67,69,71,73,79,83,85,89,91,95,97,101,102,103,107,109,113,119,127,131,133,137,139,147,149,151,153,154,157,159,163,167,173,179,181,185,191,193,197,199,209,211,221,223,227,229,233,239,241,247,251,255,257,258,263,269,271,275,277,281,283,286,293,307,311,313,317,323,325,327,331,337,341,347,349,353,355,357,359,365,367,370,373,377,379,381,383,389,397,401,409,419,421,426,431,433,434,435,439,443,449,451,455,457,461,463,467,479,481,487,491,493,499,503,509,511,521,523,541,545,546,547,557,559,561,563,569,571,577,587,593,595,599,601,607,613,617,619,629,631,635,641,643,645,647,653,659,661,665,670,671,673,674,677,679,683,687,691,701,703,709,719,723,727,733,739,743,751,755,757,761,765,769,773,787,797,806,809,811,819,821,823,827,829,839,853,857,859,861,863,866,867,869,871,877,881,883,887,901,907,911,919,923,929,935,937,941,946,947,953,967,971,977,983,991,997,1001]
-
-All this numbers + prime sqqueares are are the NSS numbers among 2^2 and 2^2+100
-
-
 
 # License
 
