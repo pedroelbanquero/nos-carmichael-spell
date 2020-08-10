@@ -268,6 +268,16 @@ Many keys are vulnerable with just one operation to solve the cypher message, an
 
 Just some seconds to get keys of 512, 1024, 2048, 4096 bits vulnerables to NOS CARMICHAEL SPELL
 
+## General Number Field Conjeture
+
+All numbers can be classified in two types, numbers who:
+
+## 10^(N+1) mod N = 1 defined his expansion by TODO
+
+## 10^T mod N = 1 , defined decimal expansion by 2^ -1 
+
+
+
 # Considerations before use the library
 
 This paper is experimental, a big challenage is comming yet to find what is s in nss derivate n s, for now jus works with NSS numbers, yo can get a idea of the proportion of NSS numbers to a no NSS numbers looking this map .
