@@ -254,8 +254,6 @@ The spell show how easy is solve more fast many numbers than factorization for d
 
 # Conclusion
 
-## n^2 - 1 mod T = 0
-
 All product of primes who have the same proportion n - sum factors in n^2 are really more easy to calculate a private key to decrypt a message.
 
 The spells proves what find and decrypt with a public key and nos carmichael spell is more fast than factorize just 1 of the numerbers, if you just want to decrypt a message you can use the nos carmichael spell if the number is vulnerable, just in 0.01 second vs 255 seconds to factorize the number with ECM parallel method.
@@ -274,7 +272,7 @@ All numbers can be classified in two types, numbers who:
 
 ## 10^(N+1) mod N = 1 defined his expansion by TODO
 
-## 10^T mod N = 1 , defined decimal expansion by 2^ -1 
+## 10^T mod N = 1 , defined decimal expansion by n^2 - 1 mod T = 0
 
 
 
