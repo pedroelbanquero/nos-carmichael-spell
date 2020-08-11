@@ -272,12 +272,11 @@ Small number than carmichael to decrypt can be calculated
 
 # General Semiprime Number Field Conjeture
 
-All semiprime numbers no square can be classified in two types, numbers who:
+All semiprime numbers no square can be classified in 3 types, numbers who:
 
-## (sqrt (n+1) )* (sqrt (n-5) ) + ( (sqrt n+1) + (sqrt n-5) )
-
-## (sqrt (n-1) )* (sqrt (n+5) ) + ( (sqrt n+1) + (sqrt n+5) )
-
+## N mod 6 = 1
+## N mod 6 = 3
+## N mod 6 = 5
 
 # License
 
