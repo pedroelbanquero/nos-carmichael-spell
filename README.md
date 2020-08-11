@@ -272,7 +272,7 @@ Small number than carmichael to decrypt can be calculated
 
 ## T(n^2) = lcm T(n) n
 
-# General Semiprime Number Field Conjeture
+# General Semiprime Number Field Conjeture (wrong)
 
 All semiprime numbers no square can be classified in 3 types, numbers who:
 
