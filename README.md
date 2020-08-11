@@ -274,9 +274,9 @@ Small number than carmichael to decrypt can be calculated
 
 All semiprime numbers no square can be classified in two types, numbers who:
 
-## (sqrt (n+1) )* (sqrt (n-6) ) + ( (sqrt n+1) + (sqrt n-6) )
+## (sqrt (n+1) )* (sqrt (n-5) ) + ( (sqrt n+1) + (sqrt n-5) )
 
-## (sqrt (n-1) )* (sqrt (n+6) ) + ( (sqrt n+1) + (sqrt n+6) )
+## (sqrt (n-1) )* (sqrt (n+5) ) + ( (sqrt n+1) + (sqrt n+5) )
 
 
 # License
