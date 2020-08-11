@@ -268,7 +268,9 @@ Just some seconds to get keys of 512, 1024, 2048, 4096 bits vulnerables to NOS C
 
 Small number than carmichael to decrypt can be calculated 
 
-## lcm T1 T2
+## T(n) = lcm T1 T2
+
+## T(n^2) = lcm T(n) n
 
 # General Semiprime Number Field Conjeture
 
