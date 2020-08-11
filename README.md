@@ -270,13 +270,11 @@ Small number than carmichael to decrypt can be calculated
 
 ## lcm T1 T2
 
-# General Number Field Conjeture
+# General Semiprime Number Field Conjeture
 
-All numbers can be classified in two types, numbers who:
+All semiprime numbers no square can be classified in two types, numbers who:
 
-## 10^(N+1) mod N = 1 defined his expansion by TODO
-
-## 10^T mod N = 1 , defined decimal expansion by n^2 - 1 mod T = 0
+## (sqrt (n+1) )* (sqrt (n-5) ) + ( (sqrt n+1) + (sqrt n-5) )
 
 
 
