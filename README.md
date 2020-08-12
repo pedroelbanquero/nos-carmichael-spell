@@ -246,7 +246,7 @@ All numbers can be grouped by his period (T) field . The distance among n^2 and 
 
 ## nsZ = n^2 - x
 
-To calculate decimal expansion of squares .
+To calculate decimal expansion distances of squares. The nos santos field. 
 
 ## T(n^2) = lcm T(n) n
 
