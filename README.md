@@ -287,7 +287,7 @@ tryperiod n period = (powMod (powMod (2) 182637981237915629761610923879871263498
 
 This means 
 
-## PrivateKey = PublicKeyN^2 - x
+## PrivateKey = PublicKeyN^2 - NSF(x)
 
 This seams obvious , but is awesome how the decimal expansion of a number is really near of the square, allowing us to group the numbers by fields. Of course you can find new fields each time you increase the numbers, just few fields for small numbers, more fields for define big numbers. But the same field who works in small numbers works in 256, 512 , 1024, 2048. 
 
@@ -354,7 +354,40 @@ The number of groups who defines de first 1000 numbers is X TODO
 
 - n^2 -5
 
-... todo
+...
+
+## Example and proof of a field englobes a group of period , carmichaels or totient, just one operation to decrypt messages, one quadratic more to factorize, one moreto calculate the decimal expansion of N, with the same "KEY" for all group.
+
+
+````
+
+*Nss> e=nss_map_nsq 2 1000 (5)
+
+(0.01 secs, 0 bytes)
+
+*Nss> e
+
+[6,10,11,18,21,31,35,42,45,54,66,69,90,101,126,150,154,174,186,246,281,306,315,331,341,366,378,406,430,431,434,451,474,518,522,546,553,570,630,639,682,685,723,770,774,798,819,870,906,978,981]
+
+(0.09 secs, 89,292,144 bytes)
+
+*Nss> map period it
+
+[7,11,2,19,6,15,36,43,46,55,67,22,91,4,127,151,155,175,187,247,28,307,316,110,30,367,379,407,431,215,435,10,475,519,523,547,78,571,631,35,683,686,30,771,775,799,6,871,907,979,108]
+
+(0.07 secs, 51,419,840 bytes)
+
+*Nss> map carmichael e
+
+[2,4,10,6,6,30,12,6,12,18,10,22,12,100,6,20,30,28,30,40,280,48,12,330,30,60,18,84,84,430,30,40,78,36,84,12,78,36,12,210,30,136,240,60,42,18,12,28,150,162,108]
+(0.01 secs, 328,512 bytes)
+
+*Nss> map totient e
+
+[2,4,10,6,12,30,24,12,24,18,20,44,24,100,36,40,60,56,60,80,280,96,144,330,300,120,108,168,168,430,180,400,156,216,168,144,468,144,144,420,300,544,480,240,252,216,432,224,300,324,648]
+
+
+````
 
 In the nss.hs you can review and test with the library.
 
@@ -366,8 +399,6 @@ If some formula dosen't exists  you need to use a mention of the authors
 To discuss with the team for commercial porpouses, you can send email to pedro@blackhole.consulting . 
 
 More information about our services in https://blackhole.consulting
-
-
 
 
 # Authors
