@@ -272,23 +272,21 @@ Small number than carmichael to decrypt can be calculated
 
 ## T(n^2) = lcm T(n) n
 
-# General Semiprime Number Field Conjeture (wrong)
+# General Decimal Expansion Longitude Field Conjeture 
 
-All semiprime numbers no square can be classified in 3 types, numbers who:
+All numbers can be explained as :
 
-## N mod 6 = 1
-## N mod 6 = 5
+## N = t * T + (SUM FACTORS)
 
- ((n-1)^2 * (n+5)^2) + 1 - ((n-1)^2 + (n+5)^2) == t * T
- 
- ((n-5)^2 * (n+1)^2) + 1 - ((n-5)^2 + (n+1)^2) == t * T
-   
- ((n+1)^2 * (n-5)^2) + 1 - ((n+1)^2 + (n-5)^2) == t * T
- 
- ((n+5)^2 * (n-1)^2) + 1 - ((n+5)^2 + (n-1)^2) == t * T
-  
- 
- 
+Decimal Expansion Longitude = (T) or Period
+
+All numbers can be grouped by his period (T) field .
+
+## nsZ = n^2 - x
+
+
+
+
 # License
 
 Free usage on Apache License 2.0 for non commercial uses
