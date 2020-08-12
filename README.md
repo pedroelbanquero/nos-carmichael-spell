@@ -2,10 +2,7 @@
 
 ![Sum of factors](sum_divisors.png)
 
-![Sum of factors](nss_fields.png)
-
-All numbers in a nos santos field can be factorized just by one operation in a loop.
-
+The image is the expansion of sum of factors in semiprimes.
 
 # PRIME PERIOD GRIMOIRE VOL. 2
 
@@ -233,6 +230,11 @@ Normal bits in N + P + Q in Sum Factors NSE = logBase 2 N = number of bits
 
 
 # General Decimal Expansion Longitude Field Conjeture 
+
+
+![Sum of factors](nss_fields.png)
+
+All numbers in a nos santos field can be factorized just by one operation. Each image represents  the numbers who can by decripted in each field, with the same field you can decrypt all different numbers, the image is in a small scale to understad how it works.
 
 All numbers can be explained as :
 
