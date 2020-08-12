@@ -270,8 +270,6 @@ Small number than carmichael to decrypt can be calculated
 
 ## T(n) = lcm T1 T2
 
-## T(n^2) = lcm T(n) n
-
 # General Decimal Expansion Longitude Field Conjeture 
 
 All numbers can be explained as :
@@ -285,6 +283,7 @@ All numbers can be grouped by his period (T) field .
 ## nsZ = n^2 - x
 
 
+## T(n^2) = lcm T(n) n
 
 
 # License
