@@ -160,9 +160,9 @@ Clearly in trillions of cases you can decrypt or solve rsa really more fast than
 
 Many keys are vulnerable with just one operation to solve the cypher message, and some operations more to factorize the number if you can factorize NSS derivation . 
 
-Just some seconds to get keys of 512, 1024, 2048, 4096 bits vulnerables to NOS CARMICHAEL SPELL
+Just some seconds to get keys of 512, 1024, 2048, 4096 bits vulnerables to NOS SANTOS FIELD
 
-If some method will exist to calculate that for all numbers directly grouped by this kind of field. Yo need to factorize after know the field and the result of the comuptation of nss .
+If some method will exist to calculate that for all numbers directly grouped by this kind of field. Yo need to factorize after know the field and the result of the comuptation of nss . This means factorisation process is a bit expensive than decryption process.
 
 Small number than carmichael to decrypt can be calculated , maybe in some cases is better fos computation because  the number is small than carmichael, and when the period is small than carmichael the modular inverse of exponent and carmichael can be smaller. This means in some cases can decrypt faster . 
 
