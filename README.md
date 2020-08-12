@@ -269,7 +269,7 @@ Just some seconds to get keys of 512, 1024, 2048, 4096 bits vulnerables to NOS C
 
 If some method will exist to calculate that for all numbers directly grouped by this kind of field. Yo need to factorize after know the field and the result of the comuptation of nss .
 
-Small number than carmichael to decrypt can be calculated , maybe in some cases is better fos computation because  the number is small than carmichael, and when the period is small than carmichael the modular inverse of exponent and carmichael can be smaller. This means in some cases can decrypt more fast . 
+Small number than carmichael to decrypt can be calculated , maybe in some cases is better fos computation because  the number is small than carmichael, and when the period is small than carmichael the modular inverse of exponent and carmichael can be smaller. This means in some cases can decrypt faster . 
 
 ## T(n) = lcm T1 T2
 
