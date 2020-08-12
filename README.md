@@ -268,19 +268,27 @@ Just some seconds to get keys of 512, 1024, 2048, 4096 bits vulnerables to NOS C
 
 Small number than carmichael to decrypt can be calculated 
 
-## lcm T1 T2
+## T(n) = lcm T1 T2
 
-# General Number Field Conjeture
+## T(n^2) = lcm T(n) n
 
-All numbers can be classified in two types, numbers who:
+# General Semiprime Number Field Conjeture (wrong)
 
-## 10^(N+1) mod N = 1 defined his expansion by TODO
+All semiprime numbers no square can be classified in 3 types, numbers who:
 
-## 10^T mod N = 1 , defined decimal expansion by n^2 - 1 mod T = 0
+## N mod 6 = 1
+## N mod 6 = 5
 
-
-
-
+ ((n-1)^2 * (n+5)^2) + 1 - ((n-1)^2 + (n+5)^2) == t * T
+ 
+ ((n-5)^2 * (n+1)^2) + 1 - ((n-5)^2 + (n+1)^2) == t * T
+   
+ ((n+1)^2 * (n-5)^2) + 1 - ((n+1)^2 + (n-5)^2) == t * T
+ 
+ ((n+5)^2 * (n-1)^2) + 1 - ((n+5)^2 + (n-1)^2) == t * T
+  
+ 
+ 
 # License
 
 Free usage on Apache License 2.0 for non commercial uses
