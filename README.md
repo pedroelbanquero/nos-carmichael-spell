@@ -2,7 +2,7 @@
 
 ![Sum of factors](sum_divisors.png)
 
-![Sum of factors](nss_field.png)
+![Sum of factors](nss_fields.png)
 
 All numbers in a nos santos field can be factorized just by one operation in a loop.
 
