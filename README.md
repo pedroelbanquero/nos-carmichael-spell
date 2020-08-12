@@ -9,15 +9,17 @@ All numbers in a nos santos field can be factorized just by one operation in a l
 
 # PRIME PERIOD GRIMOIRE VOL. 2
 
-The present document try to probe how rsa is more easy to solve than factorizacion of semiprimes, with the NSS method (nos-santos spell)
+This explain how the nos santos fields works, with focus in compare RSA problem with factorization and calculate decimal expansion. All related 
 
-The NSS method is a efficient way to calculate the N decimal expansion, for semiprimes .
+Uses as a base RSA algorithm to check divisors of period in decimal expansion.
 
-The NSS method allow you to calculate the sum of factors in a efficient way, without knowing the prime factors, when de product of primes are NSS.
+The NSF method is a efficient way to calculate the N decimal expansion, for semiprimes .
 
-The NSS method improves factorization methods for the most of small numbers and a big percentage of big numbers.
+The NSF method allow you to calculate the sum of factors in a efficient way, without knowing the prime factors, when de product of primes are in the field.
 
-The code of NOS-SANTOS SPELL has been writed in haskell language.
+The NSF method improves factorization methods for the most of small numbers and a big percentage of big numbers.
+
+The code of NOS-SANTOS-FIELD has been writed in haskell language.
 
 ## Grimoire basis spells
 
