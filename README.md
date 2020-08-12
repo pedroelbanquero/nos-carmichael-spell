@@ -312,6 +312,20 @@ To discuss with the team for commercial porpouses, you can send email to pedro@b
 
 More information about our services in https://blackhole.consulting
 
+# Contributions and collaborations
+
+All contributions are welcome and collaborations are welcome. 
+
+If you want to collaborate as a coder in the project to develop libraies and research experiments you are invited. please contact in pedro@blackhole.consulting
+
+Donations of hardware to build a super computer are welcome, we need graphic cards, micro processors , ram and all kind of computer components to build a cluster for make more fast the investigation. Old gpu rig miners are welcome.
+
+If you have a place with some KW of energy we are glad to build the computer in your place.
+
+If you have a super computer we are glad to do experiemnts toguether.
+
+We are a small group of geeks without resources, if you want to collaborate in economical aspects for the investigation you can make a donation here .
+
 
 # Authors
 
