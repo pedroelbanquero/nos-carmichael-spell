@@ -209,7 +209,7 @@ All numbers can be grouped by his period (T) field . The distance among n^2 and 
 
 ## nsZ = n^2 - NSF(n,e,x)
 
-To calculate decimal expansion distances of squares. The nos santos field. 
+To calculate decimal expansion distances of squares. The nos santos field. The X is the field
 
 *e allways a coprime of period , totient or carmichael. using a big prime number is enougth.
 
