@@ -180,7 +180,9 @@ tryperiod n period = (powMod (powMod (2) 182637981237915629761610923879871263498
 
 This means 
 
-## PrivateKey = PublicKeyN^2 - NSF(x)
+## PrivateKey = PublicKeyN^2 - NSF(exponent, x)
+
+The exponenent changes de field but always contain totient , carmichael and period numbers and derivations of them.
 
 This seams obvious , but is awesome how the decimal expansion of a number is really near of the square, allowing us to group the numbers by fields. Of course you can find new fields each time you increase the numbers, just few fields for small numbers, more fields for define big numbers. But the same field who works in small numbers works in 256, 512 , 1024, 2048. 
 
@@ -203,9 +205,12 @@ Decimal Expansion Longitude = (T) or Period
 
 All numbers can be grouped by his period (T) field . The distance among n^2 and T multiple in any number
 
-## nsZ = n^2 - NSF(x)
+## nsZ = n^2 - NSF(e,x)
 
 To calculate decimal expansion distances of squares. The nos santos field. 
+
+*e allways a coprime of period , totient or carmichael. using a big prime number is enougth.
+
 
 ## T(n^2) = lcm T(n) n
 
