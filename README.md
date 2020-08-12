@@ -87,7 +87,7 @@ or
 
 n^2 - x mod T = 0 
 
-Sum Factors q p = (mod N T) + 1
+Sum Factors q p = (mod N T) * t + 1
 
 # Conjure spells
 
