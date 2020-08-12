@@ -324,6 +324,10 @@ To decode just make goldbach of the first parameter 42 get the option 3, make th
 
 By this way in information terms in a product of primes (the most of the numbers) you can keep the information about wich factors have in N with more or less the same bits than just N.
 
+Normal bits for N in information theory = logBase 2 N = number of bits
+
+Normal bits in N + P + Q in Sum Factors NSE = logBase 2 N = number of bits
+
 
 
 # General Decimal Expansion Longitude Field Conjeture 
