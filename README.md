@@ -180,7 +180,7 @@ tryperiod computes RSA algorithm to encrypt and decrypt a test number.
 
 the maps of the demostration have a result the numbers who have the same period n^2 - NSF(e,x), who decrypts the message "2". 
 
-This means the same funcion with the same aprameters can decrypt infinite different public keys group
+This means the same funcion with the same parameters can decrypt infinite different public keys group
 
 ## PrivateKey = PublicKeyN^2 - NSF(PublicKeyE, x)
 
