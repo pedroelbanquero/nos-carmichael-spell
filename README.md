@@ -85,7 +85,7 @@ N^2+N^2 - N^2  mod T = 0
 
 or 
 
-n^2 -1 mod T = 0 
+n^2 - x mod T = 0 
 
 Sum Factors q p = (mod N T) + 1
 
