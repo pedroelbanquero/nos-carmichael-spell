@@ -278,12 +278,25 @@ All numbers can be explained as :
 
 Decimal Expansion Longitude = (T) or Period
 
-All numbers can be grouped by his period (T) field .
+All numbers can be grouped by his period (T) field . The distance among n^2 and T multiple in any number
 
 ## nsZ = n^2 - x
 
+To calculate decimal expansion of squares .
 
 ## T(n^2) = lcm T(n) n
+
+RSA algorithm allow us to check divisors of the Period.
+
+````
+
+tryperiod n period = (powMod (powMod (2) 1826379812379156297616109238798712634987623891298419 n) (modular_inverse 1826379812379156297616109238798712634987623891298419 period) n) - (2) 
+
+
+````
+
+
+In the nss.hs you can review and test with the library.
 
 
 # License
