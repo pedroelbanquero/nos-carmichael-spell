@@ -176,7 +176,9 @@ tryperiod n period = (powMod (powMod (2) 182637981237915629761610923879871263498
 
 
 ````
+tryperiod computes RSA algorithm to encrypt and decrypt a test number.
 
+the maps of the demostration have a result the numbers who have the same period n^2 - NSF(e,x), who decrypts the message "2". 
 
 This means 
 
