@@ -194,7 +194,7 @@ Posible aplications in encoding system who keep the value of the factors in the 
 
 SUM FACTORS = 13+29 = 42
 
-The goldbach finite probabilities of 42 are 3, to solve the golkdbach conjecture who says , any even number can be composed at least by the sum of two primes. 
+The goldbach finite probabilities of 42 are 3, to solve the goldbach conjecture who says , any even number can be composed at least by the sum of two primes. 
 
 
 ````
@@ -223,10 +223,12 @@ By this way in information terms in a product of primes (the most of the numbers
 # Information theory
 
 
+*In perfect encoding, all diferent symbols. If all symbols are different you can't compress nothing. If the data are encoded at the perfect base for N symbols.
+
+
 Normal bits for N in information theory b information = logBase 2 N = number of bits
 
 Normal bits in N + P + Q in Sum Factors NSE = logBase 2 N = number of bits
-
 
 
 # General Decimal Expansion Longitude Field Conjeture 
