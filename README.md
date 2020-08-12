@@ -334,7 +334,7 @@ Normal bits in N + P + Q in Sum Factors NSE = logBase 2 N = number of bits
 
 All numbers can be explained as :
 
-## N = t * T + (SUM FACTORS)
+## N = t * T + (SUM FACTORS) - 1
 
 Decimal Expansion Longitude = (T) or Period
 
