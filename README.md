@@ -69,9 +69,7 @@ p^2 * q^2 = n^2
 
 Then 
 
-n^2 - p^2+1 = totient ^ 2 for squares
-
-n^2 - (p^2 + q^2) + 1 = totient ^ 2 
+TODO
 
 Then 
 
