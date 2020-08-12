@@ -154,7 +154,7 @@ The spells proves what find and decrypt with a public key and nos carmichael spe
 
 Clearly in trillions of cases you can decrypt or solve rsa really more fast than factorization fastest methods GNFS or ECM when (p * q) are
 
-## n^2 - NSF(X) mod T = 0
+## n^2 - NSF(e,x) mod T = 0
 
 Many keys are vulnerable with just one operation to solve the cypher message, and some operations more to factorize the number if you can factorize NSS derivation . 
 
