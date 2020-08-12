@@ -195,10 +195,6 @@ nssecm_period n= fst ( (take 1 $ filter (\(x,y)-> y==1) $ map (\x -> (x,powMod 1
 period n = (length (takeWhile (/=1) $ map (\x -> powMod 10 x n ) ( tail [0,1..n])) ) +1
 
 
-
-
-
-
 ````
 
 
@@ -256,7 +252,7 @@ The spell show how easy is solve more fast many numbers than factorization for d
 
 All product of primes who have the same proportion n - sum factors in n^2 are really more easy to calculate a private key to decrypt a message.
 
-The spells proves what find and decrypt with a public key and nos carmichael spell is more fast than factorize just 1 of the numerbers, if you just want to decrypt a message you can use the nos carmichael spell if the number is vulnerable, just in 0.01 second vs 255 seconds to factorize the number with ECM parallel method.
+The spells proves what find and decrypt with a public key and nos carmichael spell is more fast than factorize just 1 of the numerbers, if you just want to decrypt a message you can use the nos carmichael spell if the number is "vulnerable", just in 0.01 second vs 255 seconds to factorize the number with ECM parallel method.
 
 Clearly in trillions of cases you can decrypt or solve rsa really more fast than factorization fastest methods GNFS or ECM when (p * q) are
 
@@ -266,9 +262,64 @@ Many keys are vulnerable with just one operation to solve the cypher message, an
 
 Just some seconds to get keys of 512, 1024, 2048, 4096 bits vulnerables to NOS CARMICHAEL SPELL
 
-Small number than carmichael to decrypt can be calculated 
+If some method will exist to calculate that for all numbers directly grouped by this kind of field. Yo need to factorize after know the field and the result of the comuptation of nss .
+
+Small number than carmichael to decrypt can be calculated , maybe in some cases is better fos computation because  the number is small than carmichael, and when the period is small than carmichael the modular inverse of exponent and carmichael can be smaller. This means in some cases can decrypt more fast . 
 
 ## T(n) = lcm T1 T2
+
+
+
+RSA algorithm allow us to check divisors of the Period. We can know if somethind is divisors of period , carmichael or euler totient. In rsa is used to decrypt messages.
+
+````
+
+tryperiod n period = (powMod (powMod (2) 1826379812379156297616109238798712634987623891298419 n) (modular_inverse 1826379812379156297616109238798712634987623891298419 period) n) - (2) 
+
+
+````
+
+
+This means 
+
+## PrivateKey = PublicKeyN^2 - x
+
+This seams obvious , but is awesome how the decimal expansion of a number is really near of the square, allowing us to group the numbers by fields. Of course you can find new fields each time you increase the numbers, just few fields for small numbers, more fields for define big numbers. But the same field who works in small numbers works in 256, 512 , 1024, 2048. 
+
+The numbers can stay in diferent Period Fields at the same time. Because different numbers have the same decimal expansion and they cross with others in his expansion.
+
+Posible aplications in encoding system who keep the value of the factors in the product , coding the numbers as a representation of (SUM FACTORS), GoldBach Counting with finite solutions depending the bits of the number, at expenses of increase the computation cost for the encoding.
+
+377 = 13 * 29 
+
+SUM FACTORS = 13+29 = 42
+
+The goldbach finite probabilities of 42 are 3, to solve the golkdbach conjecture who says , any even number can be composed at least by the sum of two primes. 
+
+
+````
+*Nss> goldbach 42
+
+[(5,37),(11,31),(13,29),(19,23),(23,19),(29,13),(31,11),(37,5)]
+
+
+````
+
+
+Probability 1 of glodbach 42 - 5+37 = 42
+Posibility 2 of glodbach 42 - 11+31= 42
+Posibility 3 of glodbach 42 - 13+29 = 42
+
+
+By the way can encode 377 --> (42,3) , 9 bits  vs 6+2+1 bits structure.
+
+You lose a bit to know if the number is odd or even. because the conjecture just apply to even numbers. Not bad to encode privatekeys and public keys in the same bits of space than just the public key.
+
+To decode just make goldbach of the first parameter 42 get the option 3, make the product 13 * 29(P Q)  and you have the 377 (N) 
+
+By this way in information terms in a product of primes (the most of the numbers) you can keep the informatio about wich factors have in N with more or less the same bits than just N.
+
+
 
 # General Decimal Expansion Longitude Field Conjeture 
 
@@ -286,34 +337,40 @@ To calculate decimal expansion of squares .
 
 ## T(n^2) = lcm T(n) n
 
-RSA algorithm allow us to check divisors of the Period.
+The number of groups who defines de first 1000 numbers is 3  
 
-````
+- n^2 -1
 
-tryperiod n period = (powMod (powMod (2) 1826379812379156297616109238798712634987623891298419 n) (modular_inverse 1826379812379156297616109238798712634987623891298419 period) n) - (2) 
+- n^2 -3
 
-
-````
-
+- n^2 -5
 
 In the nss.hs you can review and test with the library.
 
-
 # License
 
-Free usage on Apache License 2.0 for non commercial uses
+Free usage on Apache License 2.0 for non for commercial uses, you can't win money with this paper or derivates. Just redistribute derivates for free.
 
+If some formula dosen't exists  you need to use a mention of the authors
 To discuss with the team for commercial porpouses, you can send email to pedro@blackhole.consulting . 
 
 More information about our services in https://blackhole.consulting
 
 
+
+
 # Authors
 
-Main Author - Vicent Nos Ripolles
+Main idea and investigation and dirty haskell functions.
 
-TODO - Revisado y corregido por Francisco Blas Izquierdo
+Author - Vicent Nos Ripolles, Consultant, Dev, Cybersecurity Auditor, Bussinesman, Hacker
 
-TODO - Revision Manuel Mollar
+Functions and Performance Haskell and Maths
+
+Author - Enrique S. , Physhicist, Maths, Computer Science
+
+TODO - Revisado y corregido por Francisco Blas Izquierdo, Hacker, Investigator Sweeden
+
+TODO - Revision Manuel Mollar - Retired , University Dr.
 
 
