@@ -317,7 +317,7 @@ You lose a bit to know if the number is odd or even. because the conjecture just
 
 To decode just make goldbach of the first parameter 42 get the option 3, make the product 13 * 29(P Q)  and you have the 377 (N) 
 
-By this way in information terms in a product of primes (the most of the numbers) you can keep the informatio about wich factors have in N with more or less the same bits than just N.
+By this way in information terms in a product of primes (the most of the numbers) you can keep the information about wich factors have in N with more or less the same bits than just N.
 
 
 
@@ -337,13 +337,15 @@ To calculate decimal expansion of squares .
 
 ## T(n^2) = lcm T(n) n
 
-The number of groups who defines de first 1000 numbers is 3  
+The number of groups who defines de first 1000 numbers is X TODO 
 
 - n^2 -1
 
 - n^2 -3
 
 - n^2 -5
+
+... todo
 
 In the nss.hs you can review and test with the library.
 
