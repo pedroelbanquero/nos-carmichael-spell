@@ -1,4 +1,4 @@
-# nos santos spell
+# nos santos field
 
 ![Sum of factors](sum_divisors.png)
 
