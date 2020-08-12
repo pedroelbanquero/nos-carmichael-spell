@@ -182,9 +182,9 @@ the maps of the demostration have a result the numbers who have the same period 
 
 This means 
 
-## PrivateKey = PublicKeyN^2 - NSF(exponent, x)
+## PrivateKey = PublicKeyN^2 - NSF(PublicKeyE, x)
 
-The exponenent changes de field but always contain totient , carmichael and period numbers and derivations of them.
+The exponenent changes the field but always contain totient , carmichael and period numbers and derivations of them.
 
 This seams obvious , but is awesome how the decimal expansion of a number is really near of the square, allowing us to group the numbers by fields. Of course you can find new fields each time you increase the numbers, just few fields for small numbers, more fields for define big numbers. But the same field who works in small numbers works in 256, 512 , 1024, 2048. 
 
