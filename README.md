@@ -89,6 +89,7 @@ n^2 - x mod T = 0
 
 Sum Factors q p = (mod N T) * t + 1
 
+
 # Conjure spells
 
 ````
@@ -459,7 +460,6 @@ This means the probability to decrypt is linked to the period longitude behavior
 
 The probability to decrypt rsa are de multiples of carmichael divisors whe is applied as a Nos Santos Field
 
-
 ## Proof of a field of the  modulous in ( powMod b e n ) or the cypher text in RSA is multiple of period of N
 
 Control group of numbers, how many numbers decodes N with NSF from 0 to N
@@ -525,7 +525,9 @@ Calculate numbers from 0 to N , (P + Q)
 36
 
 
-To me seems clear you don't have the same probabilities.
+When the primes are weak (with small period) you have a lot more probabilities than in factorization to decrypt the message.
+
+To me seems clear you don't have the same probabilities. And are linked to different things, the error was than carmichael always is calculated with p or 1 -1 and no with the real period in decimal expansion. Because many primes have stron period like reptend primes, and others no.
 
 As we can see , really more probable to find numbers who decrypt than numbers who factorize N. This is a contradiction of assume than Extended Riemann Hypothesis is true. 
 
