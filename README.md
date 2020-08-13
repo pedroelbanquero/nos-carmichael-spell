@@ -336,9 +336,9 @@ The number of groups who defines de first 1000 numbers is X TODO
 
 ##  factors N T 
 	
-	P = ((N - T) / 2 ) +  sqrt ( ((N - T) / 2 )^2 - N ) 
+	P = ((N - T) +1 / 2 +1) +  sqrt ( ((N - T) +1 / 2 )^2 - N ) 
 	
-	Q = ((N - T) / 2 ) -  sqrt ( ((N - T) / 2 )^2 - N )
+	Q = ((N - T) +1 / 2 ) -  sqrt ( ((N - T) +1 / 2 )^2 - N )
 	
 ## Period of decimal expansion
 
