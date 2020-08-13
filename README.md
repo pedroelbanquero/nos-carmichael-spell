@@ -373,7 +373,7 @@ The number of groups who defines de first 1000 numbers is X TODO
 ## nsZ = n^2 - NSF(n,e,x)
 
 
-## Example and proof of a field englobes a group of period , carmichaels or totient (private keys)
+## Example and proof of a field englobes a group of period , carmichaels or totient (private keys), and same nnumbers can be found in diferent fields.
 
 Just one operation to decrypt messages, one quadratic more to factorize, one more to calculate the decimal expansion of N, with the same "KEY" for all group.
 
@@ -413,6 +413,45 @@ TODO - HERE EACH FUNCTIONS
 ````
 
 
+## Proof of more multiples of x can be found than multiples of factors from 0 to N, using NSF fields.
+
+````
+
+-- function to try all fields until N, tunned with 2*3 because all carmichael numbers can be divided by 6 , by this way we get more numbers who decrypt with + 1
+is to reduce number of loops , because we are just interested in multiples of 6
+
+
+alldec2 n = take 1000 $ filter (\(z,y) -> y == 0 ) (map (\x-> (x , tryperiod n ((x^2) + (x*6))) ) (reverse [1..n]))
+
+
+*Nss> alldec2 1189
+
+[(1184,0),(1170,0),(1155,0),(1134,0),(1130,0),(1120,0),(1114,0),(1100,0),(1094,0),(1092,0),(1090,0),(1074,0),(1072,0),(1068,0),(1064,0),(1054,0),(1050,0),(1044,0),(1030,0),(1020,0),(1016,0),(1010,0),(1009,0),(995,0),(994,0),(983,0),(980,0),(974,0),(960,0),(946,0),(940,0),(925,0),(924,0),(917,0),(910,0),(904,0),(900,0),(890,0),(889,0),(884,0),(882,0),(855,0),(854,0),(844,0),(840,0),(834,0),(820,0),(819,0),(812,0),(806,0),(784,0),(780,0),(778,0),(770,0),(764,0),(760,0),(750,0),(734,0),(724,0),(722,0),(714,0),(700,0),(694,0),(686,0),(680,0),(672,0),(666,0),(663,0),(644,0),(642,0),(640,0),(630,0),(629,0),(624,0),(623,0),(610,0),(582,0),(574,0),(570,0),(560,0),(559,0),(554,0),(540,0),(539,0),(525,0),(522,0),(504,0),(490,0),(484,0),(470,0),(462,0),(448,0),(444,0),(442,0),(441,0),(440,0),(434,0),(429,0),(420,0),(414,0),(400,0),(399,0),(392,0),(390,0),(386,0),(380,0),(372,0),(366,0),(364,0),(360,0),(350,0),(344,0),(336,0),(330,0),(322,0),(319,0),(316,0),(310,0),(294,0),(288,0),(284,0),(280,0),(274,0),(267,0),(260,0),(243,0),(240,0),(234,0),(225,0),(224,0),(210,0),(204,0),(190,0),(176,0),(155,0),(154,0),(140,0),(134,0),(124,0),(120,0),(119,0),(114,0),(90,0),(84,0),(70,0),(64,0),(60,0),(57,0),(50,0),(49,0),(44,0),(42,0),(36,0),(34,0),(28,0),(15,0),(14,0)]
+
+*Nss> length it
+
+
+157
+
+
+*Nss> P.factorise 1189
+
+
+[(Prime 29,1),(Prime 41,1)]
+
+*Nss> 41+29
+
+70
+
+````
+
+This demostrates how de multiples of divisors of carmichael can decrypt message "2" in 157 from 0 to 1189, and how just 70 multiples of 29 and 41 are to be found from 0 to 1189
+
+In probability terms allways is more probable find a number who decrypts than a factor of N if the longitudes of the periods of decimal expansion of the semiprime are small.
+
+This probability changes when the prime factors have a long or large period.
+
+This means the probability to decrypt is linked to the period longitude behavior not to factors factorization.
 
 
 In the nss.hs you can review and test with the library.
