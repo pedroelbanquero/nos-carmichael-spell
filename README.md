@@ -544,7 +544,7 @@ This is a contradiction , assume than Extended Riemann Hypothesis is true. Becau
 
 PROBABILITIES TO DECRYPT > PROBABILITIES TO FACTORIZE
 
-
+Like more semiprimes are composed by by weak primes in period terms, than strong periods, we can deduce more semiprimes going to have  more probabilities to be decrypted than to be factorized.
 
 In the nss.hs you can review and test with the library.
 
