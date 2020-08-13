@@ -420,6 +420,8 @@ TODO - HERE EACH FUNCTIONS
 -- function to try all fields until N, tunned with 2*3 because all carmichael numbers can be divided by 6 , by this way we get more numbers who decrypt with + 1
 is to reduce number of loops , because we are just interested in multiples of 6
 
+-- improbes rsa method for decryption.
+
 
 alldec2 n = take 1000 $ filter (\(z,y) -> y == 0 ) (map (\x-> (x , tryperiod n ((x^2) + (x*6))) ) (reverse [1..n]))
 
@@ -451,8 +453,85 @@ In probability terms allways is more probable find a number who decrypts than a 
 
 This probability changes when the prime factors have a long or large period.
 
+Increase the probability of succes for x value when makes the product * 6
+
 This means the probability to decrypt is linked to the period longitude behavior not to factors factorization.
 
+The probability to decrypt rsa are de multiples of carmichael divisors whe is applied as a Nos Santos Field
+
+
+## Proof of a field of the  modulous in ( powMod b e n ) or the cypher text in RSA is multiple of period of N
+
+Control group of numbers, how many numbers decodes N with NSF from 0 to N
+
+
+## Prood more numbers from 0 to N who decrypts a message than factorize a number
+
+Calculate numbers who decrypts a message from 0 to N
+
+
+````
+
+*Nss> length $ alldec2 427
+
+94
+
+*Nss> length $ alldec2 203
+
+30
+
+*Nss> length $ alldec2 323
+
+78
+
+*Nss> length $ alldec2 377
+
+58
+
+*Nss> length $ alldec2 2049
+
+409
+
+
+````
+
+As wikipedia say .... Rivest, Shamir, and Adleman noted[2] that Miller has shown that – assuming the truth of the Extended Riemann Hypothesis – finding d from n and e is as hard as factoring n into p and q (up to a polynomial time difference).However, Rivest, Shamir, and Adleman noted, in section IX/D of their paper, that they had not found a proof that inverting RSA is equally as hard as factoring. ... Ths is like say nothing . Seems just a justification to explain his system of cryptography who make him billionary seems with the same difficulty.
+
+
+Calculate numbers from 0 to N , (P + Q)
+
+*Libs.Events> rsigma 377
+
+42
+
+*Libs.Events> rsigma 427
+
+68
+
+*Libs.Events> rsigma 1189
+
+70
+
+*Libs.Events> rsigma 1121
+
+78
+
+*Libs.Events> rsigma 767
+
+72
+
+*Libs.Events> rsigma 323
+
+36
+
+
+To me seems clear you don't have the same probabilities.
+
+As we can see , really more probable to find numbers who decrypt than numbers who factorize N. This is a contradiction of assume than Extended Riemann Hypothesis is true. 
+
+If for they the hipotesys seems true, to me seems false.
+
+PRBABILITIES TO DECRYPT > PROBABILITIES TO FACTORIZE
 
 In the nss.hs you can review and test with the library.
 
