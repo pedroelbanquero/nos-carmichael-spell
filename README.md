@@ -239,7 +239,7 @@ TODO - HERE EACH FUNCTIONS
 
 ````
 
-*Nss> e=nss_map_nsq 2 1000 (5)
+*Nss> e=nsf_map_nsq 2 1000 (5)
 
 (0.01 secs, 0 bytes)
 
@@ -266,6 +266,23 @@ TODO - HERE EACH FUNCTIONS
 
 
 ````
+
+Limit distance max distance from N square for first 1000 numbers
+
+````
+
+
+*Nss> nsf_map 2 1000 (14)
+
+[7,9,15,21,29,33,42,43,46,63,75,110,114,117,123,127,145,147,175,178,183,190,205,207,229,231,234,237,255,258,259,269,273,275,281,301,306,315,325,350,365,375,377,387,399,425,429,534,549,558,585,595,603,605,610,623,630,645,650,665,682,714,735,765,775,777,794,801,819,825,871,915,921,955,959,966]
+
+*Nss> nsf_map 2 1000 (15)
+
+*** Exception: divide by zero
+
+````
+
+
 
 In the nss.hs you can review and test with the library.
 
