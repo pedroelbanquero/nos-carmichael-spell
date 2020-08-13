@@ -464,6 +464,8 @@ The probability to decrypt rsa are de multiples of carmichael divisors whe is ap
 
 Control group of numbers, how many numbers decodes N with NSF from 0 to N
 
+TODO
+
 
 ## Prood more numbers from 0 to N who decrypts a message than factorize a number
 
@@ -538,12 +540,11 @@ To me seems clear you don't have the same probabilities. And are linked to diffe
 686
 
 
-This is a contradiction of assume than Extended Riemann Hypothesis is true. Because decrypt and factorize are linked to different things, the first to the length of decimal expansion period , the second to the value of factors of N.
+This is a contradiction , assume than Extended Riemann Hypothesis is true. Because decrypt and factorize are linked to different things, the first to the length of decimal expansion period , the second to the value of factors of N.
+
+PROBABILITIES TO DECRYPT > PROBABILITIES TO FACTORIZE
 
 
-If for they the hipotesys seems true, to me seems false.
-
-PRBABILITIES TO DECRYPT > PROBABILITIES TO FACTORIZE
 
 In the nss.hs you can review and test with the library.
 
