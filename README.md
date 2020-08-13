@@ -228,7 +228,7 @@ The number of groups who defines de first 1000 numbers is X TODO
 
 ...
 
-## Example and proof of a field englobes a group of period , carmichaels or totient,
+## Example and proof of a field englobes a group of period , carmichaels or totient (private keys)
 
 Just one operation to decrypt messages, one quadratic more to factorize, one more to calculate the decimal expansion of N, with the same "KEY" for all group.
 
