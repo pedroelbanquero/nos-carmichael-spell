@@ -274,7 +274,7 @@ Small number than carmichael to decrypt can be calculated , maybe in some cases 
 
 ## T(n) = lcm T1 T2
 
-RSA algorithm allow us to check divisors of the Period. We can know if somethind is divisors of period , carmichael or euler totient. In rsa is used to decrypt messages.
+RSA algorithm allow us to check divisors of the Period. We can know if something is divisor of period, carmichael or totient , carmichael or euler totient. In rsa is used to decrypt messages.
 
 ````
 
