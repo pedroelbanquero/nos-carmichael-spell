@@ -339,6 +339,32 @@ The number of groups who defines de first 1000 numbers is X TODO
 	P = ((N - T) / 2 ) +  sqrt ( ((N - T) / 2 )^2 - N ) 
 	
 	Q = ((N - T) / 2 ) -  sqrt ( ((N - T) / 2 )^2 - N )
+	
+## Period of decimal expansion
+
+	-- With P Q
+	tpq p q = out
+		where
+		tp = div_until_mod_1 (p-1) (p-1)
+		tq = div_until_mod_1 (q-1) (q-1)
+		out = (lcm tp tq)
+
+
+	-- With N and ECM 
+	tn n = tp
+		where
+		c = carmichael n
+		tp = div_until_mod_1 (c) (c)
+
+
+	div_until_mod_1 p last
+		| period == 1 = div_until_mod_1 dp dp 
+		| mp /= 0 = last
+		| otherwise = last
+		where
+		(dp,mp) = divMod (p) 2
+		period = powMod 10 dp (p+1)
+
 
 ## The fields are crossing the lines of carmichael expansion (private keys)
 
