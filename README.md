@@ -524,12 +524,22 @@ Calculate numbers from 0 to N , (P + Q)
 
 36
 
+*Libs.Events> rsigma 2049
+
+686
 
 When the primes are weak (with small period) you have a lot more probabilities than in factorization to decrypt the message.
 
-To me seems clear you don't have the same probabilities. And are linked to different things, the error was than carmichael always is calculated with p or 1 -1 and no with the real period in decimal expansion. Because many primes have stron period like reptend primes, and others no.
+To me seems clear you don't have the same probabilities. And are linked to different things, the error was than carmichael always is calculated with p or 1 -1 and no with the real period in decimal expansion. Because many primes have strong period like reptend primes, and others no. W"ho generate more or less posibilities , liki the opposite case when the factors are small in order to N like 2049 you can observe is more easy find a numnber who factorize than decrypt a message.
 
-As we can see , really more probable to find numbers who decrypt than numbers who factorize N. This is a contradiction of assume than Extended Riemann Hypothesis is true. 
+
+*Libs.Events> rsigma 2049
+
+686
+
+
+This is a contradiction of assume than Extended Riemann Hypothesis is true. Because decrypt and factorize are linked to different things, the first to the length of decimal expansion period , the second to the value of factors of N.
+
 
 If for they the hipotesys seems true, to me seems false.
 
