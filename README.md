@@ -228,7 +228,7 @@ The number of groups who defines de first 1000 numbers is X TODO
 
 ...
 
-## The fields are the lines of carmichael expansion (private keys)
+## The fields are crossing the lines of carmichael expansion (private keys)
 
 ![Sum of factors](carmichaels.png)
 
