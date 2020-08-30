@@ -1,6 +1,6 @@
 # Nos Santos Field
 
-![Sum of factors](https://github.com/pedroelbanquero/sum_divisors.png)
+![Sum of factors](sum_divisors.png)
 
 The image is the expansion of sum of factors in semiprimes.
 
@@ -302,7 +302,7 @@ The numbers can stay in diferent Period Fields at the same time. Because differe
 # General Decimal Expansion Longitude Field Conjeture 
 
 
-![Sum of factors](https://github.com/pedroelbanquero/nss_fields.png)
+![Sum of factors](nss_fields.png)
 
 All numbers in a nos santos field can be factorized just by one operation. Each image represents  the numbers who can by decripted in each field, with the same field you can decrypt all different numbers, the image is in a small scale to understad how it works.
 
