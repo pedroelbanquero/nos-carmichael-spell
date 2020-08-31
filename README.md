@@ -2,23 +2,23 @@
 
 ![Sum of factors](sum_divisors.png)
 
-The image is the expansion of sum of factors in semiprimes.
+The image shows the expansion of the sum of factors in semiprimes.
 
 # PRIME PERIOD GRIMOIRE VOL. 2
 
-This grimoire is a draft in continued development. 
+This grimoire is a draft under continuous development. 
 
-This explain how the nos santos fields works, with focus in compare RSA problem with factorization and calculate decimal expansion. All related 
+It explains how the Nos-Santos-Field (NSF) works, focusing in the similarities between the RSA problem, factorization, and the calculation decimal expansions.
 
-Uses as a base RSA algorithm to check divisors of period in decimal expansion.
+RSA is used to verify if a number is a valid divisor of the period in the decimal expansion.
 
-The NSF method is a efficient way to calculate the N decimal expansion, for semiprimes .
+The NSF method is an efficient way to calculate the N decimal expansion, for semiprimes.
 
-The NSF method allow you to calculate the sum of factors in a efficient way, without knowing the prime factors, when de product of primes are in the field.
+The NSF method allows calculating the sum of factors in a efficient way, without knowing the prime factors, when the product of primes are in the field.
 
-The NSF method improves factorization methods for the most of small numbers and a big percentage of big numbers.
+The NSF method improves factorization methods for the mojority of small numbers and a significant percentage of large numbers.
 
-The code of NOS-SANTOS-FIELD has been writed in haskell language.
+The code of NOS-SANTOS-FIELD has been written in the Haskell programming language.
 
 ## Grimoire basis spells
 
