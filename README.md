@@ -209,7 +209,7 @@ alldec n = filter (\(z,y) -> y == 0) (map (\x->(x,tryperiod n x)) [1..n])
 
 
 
-# Casting spells
+# Casting spells, nsiZ = 0
 
 ```
 -- We search for NSS numbers among 512 bits and 512 bit + 1000
