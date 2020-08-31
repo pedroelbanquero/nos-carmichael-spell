@@ -461,11 +461,6 @@ This means the probability to decrypt is linked to the period longitude behavior
 
 The probability to decrypt rsa are de multiples of carmichael divisors when is applied as a Nos-Santos-Izquierdo Field
 
-## Proof of a field of the  modulus in ( powMod b e n ) or the cypher text in RSA is multiple of period of N
-
-Control group of numbers, how many numbers decodes N with NSIF from 0 to N
-
-TODO
 
 
 ## Prood more numbers from 0 to N who decrypts a message than factorize a number
