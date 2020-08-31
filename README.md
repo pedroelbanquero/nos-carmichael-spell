@@ -244,7 +244,7 @@ alldec n = filter (\(z,y) -> y == 0) (map (\x->(x,tryperiod n x)) [1..n])
 
 (255.44 secs, 139,784,410,360 bytes)
 
--- The same number with Nos-Carmichael spell, the result can be used just to decrypt messages
+-- The same number with nsif, the result can be used just to decrypt messages
 
 *Ncs> nsf_derivate 
 
@@ -532,7 +532,7 @@ Calculate numbers from 0 to N , (P + Q)
 
 When the primes are weak (with small period) you have a lot more probabilities than in factorization to decrypt the message.
 
-To me seems clear you don't have the same probabilities. And are linked to different things, the error was than carmichael always is calculated with p or 1 -1 and no with the real period in decimal expansion. Because many primes have strong period like reptend primes, and others no. W"ho generate more or less posibilities , liki the opposite case when the factors are small in order to N like 2049 you can observe is more easy find a numnber who factorize than decrypt a message.
+To me seems clear you don't have the same probabilities. And are linked to different things, the error was than carmichael always is calculated with p or 1 -1 and no with the real period in decimal expansion. Because many primes have strong period like reptend primes, and others no. Who generate more or less posibilities , liki the opposite case when the factors are small in order to N like 2049 you can observe is more easy find a numnber who factorize than decrypt a message.
 
 
 *Libs.Events> rsigma 2049
