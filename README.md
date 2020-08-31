@@ -379,12 +379,12 @@ The number of groups who defines de first 1000 numbers is X TODO
 
 Just one operation to decrypt messages, one quadratic more to factorize, one more to calculate the decimal expansion of N, with the same "KEY" for all group.
 
-TODO - HERE EACH FUNCTIONS
-
 
 
 
 ````
+
+map 1000 numbers from 2^2 to 2^2+1000 who are in the field 5
 
 *Nss> e=nsf_map_nsq 2 1000 (5)
 
@@ -396,16 +396,23 @@ TODO - HERE EACH FUNCTIONS
 
 (0.09 secs, 89,292,144 bytes)
 
+get period from  e mapping
+
 *Nss> map period it
 
 [7,11,2,19,6,15,36,43,46,55,67,22,91,4,127,151,155,175,187,247,28,307,316,110,30,367,379,407,431,215,435,10,475,519,523,547,78,571,631,35,683,686,30,771,775,799,6,871,907,979,108]
 
 (0.07 secs, 51,419,840 bytes)
 
+get carmichael from e mapping
+
 *Nss> map carmichael e
 
 [2,4,10,6,6,30,12,6,12,18,10,22,12,100,6,20,30,28,30,40,280,48,12,330,30,60,18,84,84,430,30,40,78,36,84,12,78,36,12,210,30,136,240,60,42,18,12,28,150,162,108]
 (0.01 secs, 328,512 bytes)
+
+
+get totient from e mapping 
 
 *Nss> map totient e
 
@@ -413,6 +420,8 @@ TODO - HERE EACH FUNCTIONS
 
 
 ````
+
+As you can see diferrent private keys can bve solved from all collection of field 5
 
 
 ## Proof of more multiples of x can be found than multiples of factors from 0 to N, using NSIF fields.
