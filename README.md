@@ -1,4 +1,4 @@
-# Nos Santos Field
+# Nos-Santos-Izquierdo Field
 
 ![Sum of factors](sum_divisors.png)
 
@@ -8,33 +8,33 @@ The image shows the expansion of the sum of factors in semiprimes.
 
 This grimoire is a draft under continuous development. 
 
-It explains how the Nos-Santos-Field (NSF) works, focusing in the similarities between the RSA problem, factorization, and the calculation decimal expansions.
+It explains how the Nos-Santos-Izquierdo Field (NSIF) works, focusing in the similarities between the RSA problem, factorization, and the calculation decimal expansions.
 
 RSA is used to verify if a number is a valid divisor of the period in the decimal expansion.
 
-The NSF method is an efficient way to calculate the N decimal expansion, for semiprimes.
+The NSIF method is an efficient way to calculate the N decimal expansion, for semiprimes.
 
-The NSF method allows calculating the sum of factors in a efficient way, without knowing the prime factors, when the product of primes are in the field.
+The NSIF method allows calculating the sum of factors in a efficient way, without knowing the prime factors, when the product of primes are in the field.
 
-The NSF method improves factorization methods for the mojority of small numbers and a significant percentage of large numbers.
+The NSIF method improves factorization methods for the majority of small numbers and a significant percentage of large numbers.
 
-The code of NOS-SANTOS-FIELD has been written in the Haskell programming language.
+The code of Nos-Santos-Izquierdo Field has been written in the Haskell programming language.
 
-## Grimoire basis spells
+## Grimoire basic spells
 
-This spells are from famouths maths geeks, like fermat and others
+These spells are from famous math researchers, including Fermat. <!--We should name them correctly-->
 
-- Rsa problem 
+- The RSA problem 
 
   - Encrypt
   
     m = powMod m e n = mc
 
-  - Descrypt
+  - Decrypt
 
     mc = powMod
   
-- Some known things
+- Other known formulas
 
   p^2 mod 6 = 1
 
@@ -59,25 +59,25 @@ Any number can be represented by
 
 N = time * period + (sum factors N) - 1
 
-Nos semiprimes are de product of primes who 
+Nos semiprimes are the product of primes which follow the following formulas:
 
-Deduction of a perfect prime square
+Deduction of a perfect prime square:
 
 p^2 * p^2 = n^2
 
-Deduction for diferent factors
+Deduction for different factors:
 
 p^2 * q^2 = n^2
 
 Then 
 
-TODO
+p^2 * q^2 = n^2 and p^2 mod 6 = 1
 
 Then 
 
 t = times of decimal expansion length
 
-( (sqrt x6+1)* (sqrt y6+1) ) - ((sqrt 6x+1) + (sqrt y6+1)) +1 = t * T -> Solution rsa
+( (sqrt x6+1)* (sqrt y6+1) ) - ((sqrt 6x+1) + (sqrt y6+1)) +1 = t * T -> RSA Solution
 
 p^2 - p mod T = 0
 
@@ -97,16 +97,16 @@ Sum Factors q p = (mod N T) * t + 1
 ````
 
 -- COMPUTE CARMICHAEL DERIVATION
--- requiere n as a first parameter a odd number prime less to buid the ramifications of the prime waves.
+-- The first paremeter is n (the semiprime) and the second the Nos-Santos-Izquierdo Field.
 
 nsf n s = (n^(2) - 1) -s
 
 
--- EXTRACT PRIVATE KEY WITH EXPONEN ANT N IN NSS NUMBERS 
+-- EXTRACT PRIVATE KEY WITH EXPONENT AND N IN NSS NUMBERS 
 
 nss_privatekey e n s= modular_inverse e (nsf n s)
 
--- EXTRACT FACTORS in NSF numbers
+-- EXTRACT FACTORS in NSIF numbers
 
 nsf_factorise_ecm n = (sg2-qrest, sg2+qrest) 
 	where
@@ -124,7 +124,7 @@ nsf_factorise n t= (sg2-qrest, sg2+qrest)
 
 
 
--- MAP NSF PRODUCT OF PRIMES
+-- MAP NSIF PRODUCT OF PRIMES
 
 -- N bits mapping
 
@@ -137,7 +137,7 @@ nsf_map s x r= map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (nsf x
 
 nsf_find nbits range to = take to $ filter (\(v,c)-> length c==2) (map (\x-> (x,P.factorise x)) (nsf_map (nbits) range 0))
 
--- N bits mappingi without perfect squares or prime numers really slow checking primes, delete for faster mapping, pending chage to a fast comprobation 
+-- N bits mapping without perfect squares nor prime numbers it is very slow at checking primality, delete for faster mapping, pending change to a faster test 
 
 nsf_map_nsq s x r =  filter (\(d)-> snd (integerSquareRootRem d) /= 0 ) (nsf_map s x r) 
 
@@ -188,8 +188,7 @@ div_until_mod_1 p last
 -- Decimal expansion in a traditional slow way
 period n = (length (takeWhile (/=1) $ map (\x -> powMod 10 x n ) ( tail [0,1..n])) ) +1
 
--- All who decodes msg decodes a number
--- in diferent kind of field
+-- All numbers which decode msg, decode a number in a different kind of field
 
 alldecnss n = filter (\(c)-> tryperiod n (n^2) == 0 || tryperiod n (n^2 - c-1)==0 || tryperiod n (n^2 + c-1) == 0 ) $ (tail [0,3..n])
 
@@ -241,7 +240,7 @@ alldec n = filter (\(z,y) -> y == 0) (map (\x->(x,tryperiod n x)) [1..n])
 
 (255.44 secs, 139,784,410,360 bytes)
 
--- The same number with nos carmichael spell, th result can be used just to decrypt messages
+-- The same number with Nos-Carmichael spell, the result can be used just to decrypt messages
 
 *Ncs> nsf_derivate 
 
@@ -255,29 +254,29 @@ alldec n = filter (\(z,y) -> y == 0) (map (\x->(x,tryperiod n x)) [1..n])
 
 ```
 
-The spell show how easy is solve more fast many numbers than factorization for decrypt messages.
+The spell show how easy is to solve faster many numbers than the factorization for message decryption.
 
 # Conclusion
 
-All product of primes who have the same proportion n - sum factors in n^2 are really more easy to calculate a private key to decrypt a message.
+For all products of primes who have the same proportion of n - sum factors in n^2 it is significantly easier to calculate a private key to decrypt a message.
 
-The spells proves what find and decrypt with a public key and nos carmichael spell is more fast than factorize just 1 of the numerbers, if you just want to decrypt a message you can use the nos carmichael spell if the number is "vulnerable", just in 0.01 second vs 255 seconds to factorize the number with ECM parallel method.
+The spells proves that find and decrypt with a public key and Nos Carmichael spell is faster than factorizing just one of the numbers, if you just want to decrypt a message you can use the Nos Carmichael spell if the number is "vulnerable", just in 0.01 seconds vs 255 seconds to factorize the number with the parallel ECM method.
 
-Clearly in trillions of cases you can decrypt or solve rsa really more fast than factorization fastest methods GNFS or ECM when (p * q) are
+Clearly in trillions of cases you can decrypt or solve rsa significantly faster than the current fastest factorization methods like GNFS or ECM when (p * q) are
 
-## n^2 - NSF(e,x) mod T = 0
+## n^2 - NSIF(e,x) mod T = 0
 
-Many keys are vulnerable with just one operation to solve the cypher message, and some operations more to factorize the number if you can factorize NSS derivation . 
+Many keys are vulnerable to find the message deciphered in just one operation, and some operations more to factorize the number if you can factorize the NSS derivation. 
 
-Just some seconds to get keys of 512, 1024, 2048, 4096 bits vulnerables to NOS SANTOS FIELD
+Just some seconds to get keys of 512, 1024, 2048 and 4096 bits vulnerable to the Nos-Santos-Izquierdo Field
 
-If some method will exist to calculate that for all numbers directly grouped by this kind of field. Yo need to factorize after know the field and the result of the comuptation of nss . This means factorisation process is a bit expensive than decryption process.
+A method exists to calculate that for all numbers directly grouped by this kind of field. You need to factorize after you know the field, the result of the computation of NSS. This means the factorization process is a bit more expensive than decryption process.
 
-Small number than carmichael to decrypt can be calculated , maybe in some cases is better fos computation because  the number is small than carmichael, and when the period is small than carmichael the modular inverse of exponent and carmichael can be smaller. This means in some cases can decrypt faster . 
+A number smaller than Carmichael needed to decrypt can also be calculated, maybe in some cases such number is better for computation because of its size, and when the period is smaller than Carmichael the modular inverse of exponent and Carmichael can be smaller. This means in some cases decryption can be performed faster. 
 
 ## T(n) = lcm T1 T2
 
-RSA algorithm allow us to check divisors of the Period. We can know if something is divisor of period, carmichael or totient , carmichael or euler totient. In rsa is used to decrypt messages.
+The RSA algorithm allows us to check divisors of the period. We can know if something is a divisor of the period, the Carmichael number or the Euler Totient. When RSA is used to decrypt messages.
 
 ````
 
@@ -285,23 +284,23 @@ tryperiod n period = (powMod (powMod (2) 182637981237915629761610923879871263498
 
 
 ````
-tryperiod computes RSA algorithm to encrypt and decrypt a test number.
+tryperiod computes the RSA algorithm to encrypt and decrypt a test number.
 
-the maps of the demostration have a result the numbers who have the same period n^2 - NSF(e,x), who decrypts the message "2". 
+The maps of the demonstration result in the numbers who have the same period n^2 - NSIF(e,x), which decrypt the message "2". 
 
-This means the same funcion with the same parameters can decrypt infinite different public keys group
+This means the same function with the same parameters can decrypt infinitely different public key groups.
 
-## PrivateKey = PublicKeyN^2 - NSF(PublicKeyE, x)
+## PrivateKey = PublicKeyN^2 - NSIF(PublicKeyE, x)
 
-The exponenent changes the field but always contain totient , carmichael and period numbers and derivations of them.
+The exponent changes the field but always contains Totient, Carmichael and period numbers and derivations of them.
 
-This seams obvious , but is awesome how the decimal expansion of a number is really near of the square, allowing us to group the numbers by fields. Of course you can find new fields each time you increase the numbers, just few fields for small numbers, more fields for define big numbers. But the same field who works in small numbers works in 256, 512 , 1024, 2048. 
+This seems obvious, but it is awesome how the decimal expansion of a number is really close to the square, allowing us to group the numbers by fields. Of course you can find new fields each time you increase the numbers, from just a few fields for small numbers, more fields appear as you define larger numbers. But the same field which works with small numbers also works in 256, 512, 1024 and 2048 bit ones. 
 
-The numbers can stay in diferent Period Fields at the same time. Because different numbers have the same decimal expansion and they cross with others in his expansion.
+The numbers can stay in didferent Period Fields at the same time. Because different numbers have the same decimal expansion and they cross with others in his expansion.
 
 
 
-# General Decimal Expansion Longitude Field Conjeture 
+# General Decimal Expansion Longitude Field Conjecture 
 
 
 ![Sum of factors](nss_fields.png)
@@ -318,7 +317,7 @@ All numbers can be grouped by his period (T) field . The distance among n^2 and 
 
 ## nsf n e x = (powMod (powMod (2) e n) (modular_inverse e n^2-x) n) - (2) == 0
 
-## nsZ = n^2 - NSF(n,e,x)
+## nsZ = n^2 - NSIF(n,e,x)
 
 To calculate decimal expansion distances of squares. The nos santos field. The X is the field
 
@@ -373,7 +372,7 @@ The number of groups who defines de first 1000 numbers is X TODO
 
 ![Sum of factors](carmichaels.png)
 
-## nsZ = n^2 - NSF(n,e,x)
+## nsZ = n^2 - NSIF(n,e,x)
 
 
 ## Example and proof of a field englobes a group of period , carmichaels or totient (private keys), and same nnumbers can be found in diferent fields.
@@ -416,7 +415,7 @@ TODO - HERE EACH FUNCTIONS
 ````
 
 
-## Proof of more multiples of x can be found than multiples of factors from 0 to N, using NSF fields.
+## Proof of more multiples of x can be found than multiples of factors from 0 to N, using NSIF fields.
 
 ````
 
@@ -460,11 +459,11 @@ Increase the probability of succes for x value when makes the product * 6
 
 This means the probability to decrypt is linked to the period longitude behavior not to factors factorization.
 
-The probability to decrypt rsa are de multiples of carmichael divisors whe is applied as a Nos Santos Field
+The probability to decrypt rsa are de multiples of carmichael divisors when is applied as a Nos-Santos-Izquierdo Field
 
-## Proof of a field of the  modulous in ( powMod b e n ) or the cypher text in RSA is multiple of period of N
+## Proof of a field of the  modulus in ( powMod b e n ) or the cypher text in RSA is multiple of period of N
 
-Control group of numbers, how many numbers decodes N with NSF from 0 to N
+Control group of numbers, how many numbers decodes N with NSIF from 0 to N
 
 TODO
 
