@@ -540,7 +540,7 @@ To me seems clear you don't have the same probabilities. And are linked to diffe
 686
 
 
-This is a contradiction , assume than Extended Riemann Hypothesis is true. Because decrypt and factorize are linked to different things, the first to the length of decimal expansion period , the second to the value of factors of N.
+This is a contradiction , assume than Rivest, Shamir, and Adleman demostration is true. Because decrypt and factorize are linked to different things, the first to the length of decimal expansion period , the second to the value of factors of N.
 
 PROBABILITIES TO DECRYPT > PROBABILITIES TO FACTORIZE
 
