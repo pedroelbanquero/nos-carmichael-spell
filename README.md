@@ -18,11 +18,15 @@ The NSIF method allows calculating the sum of factors in a efficient way, withou
 
 The NSIF method improves factorization methods for the majority of small numbers and a significant percentage of large numbers.
 
+The NSIF method proofs factorization and decrypt a message with RSA are diferent problems, depending N is more fast factorize or decrypt a message.
+
 The code of Nos-Santos-Izquierdo Field has been written in the Haskell programming language.
+
+
 
 ## Grimoire basic spells
 
-These spells are from famous math researchers, including Fermat. <!--We should name them correctly-->
+These spells are from famous math researchers, including Fermat. Euler. Carmichael.
 
 - The RSA problem 
 
