@@ -315,9 +315,9 @@ Decimal Expansion Longitude = (T) or Period
 
 All numbers can be grouped by his period (T) field . The distance among n^2 and T multiple in any number
 
-## nsf n e x = (powMod (powMod (2) e n) (modular_inverse e n^2-x) n) - (2) == 0
+## nsif n e x = (powMod (powMod (2) e n) (modular_inverse e n^2-x) n) - (2) == 0
 
-## nsZ = n^2 - NSIF(n,e,x)
+## nsiZ = n^2 - NSIF(n,e,x)
 
 To calculate decimal expansion distances of squares. The nos santos field. The X is the field
 
@@ -326,15 +326,6 @@ To calculate decimal expansion distances of squares. The nos santos field. The X
 
 ## T(n^2) = lcm T(n) n
 
-The number of groups who defines de first 1000 numbers is X TODO 
-
-- n^2 -1
-
-- n^2 -3
-
-- n^2 -5
-
-...
 
 ##  factors N T 
 	
