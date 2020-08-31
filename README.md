@@ -416,7 +416,7 @@ get totient from e mapping
 
 ````
 
-As you can see diferrent private keys can bve solved from all collection of field 5
+As you can see diferrent private keys can be solved from all collection of field 5
 
 
 ## Proof of more multiples of x can be found than multiples of factors from 0 to N, using NSIF fields.
