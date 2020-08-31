@@ -572,7 +572,9 @@ We are a small group of geeks without resources, if you want to collaborate in e
 
 Main idea, investigation and dirty haskell functions.
 
-Author - Vicent Nos Ripolles, Consultant, Dev, Cybersecurity Auditor, Bussinesman, Hacker (srdelabismo) Panamá
+Author - Vicent Nos Ripolles, Consultant, Dev, Cybersecurity Auditor, Bussinesman, Hacker (srdelabismo) Spain
+
+Author - Pedro el Banquero - Banker SysAdmin - Panamá
 
 Functions and Performance Haskell and Maths
 
