@@ -6,6 +6,8 @@ The image is the expansion of sum of factors in semiprimes.
 
 # PRIME PERIOD GRIMOIRE VOL. 2
 
+This grimoire is a draft in continued development. 
+
 This explain how the nos santos fields works, with focus in compare RSA problem with factorization and calculate decimal expansion. All related 
 
 Uses as a base RSA algorithm to check divisors of period in decimal expansion.
@@ -48,7 +50,7 @@ This spells are from famouths maths geeks, like fermat and others
   
   totient(n) mod T(n) = 0
   
-  x^2-y^2 mod N = 0
+  x^2 - y^2 mod N = 0
 
 
 # Spells logics
@@ -574,16 +576,22 @@ We are a small group of geeks without resources, if you want to collaborate in e
 
 # Authors
 
-Main idea and investigation and dirty haskell functions.
+Main idea, investigation and dirty haskell functions.
 
-Author - Vicent Nos Ripolles, Consultant, Dev, Cybersecurity Auditor, Bussinesman, Hacker
+Author - Vicent Nos Ripolles, Consultant, Dev, Cybersecurity Auditor, Bussinesman, Hacker (srdelabismo) Panamá
 
 Functions and Performance Haskell and Maths
 
-Author - Enrique S. , Physhicist, Maths, Computer Science
+Co-Author - My master, Enrique S., Physhicist, Maths, Computer Science (MathMax) Spain
 
-TODO - Revisado y corregido por Francisco Blas Izquierdo, Hacker, Investigator Sweeden
+Enrique help me to develop all functions and explain me how rsa works and all that i know about maths and cryptografy. He was investigating factorization more than 8 years.
 
-TODO - Revision Manuel Mollar - Retired , University Dr.
+Co-Author - Francisco Blas Izquierdo, Hacker, Ph.D. student, Chalmers University of Technology" (KLONDIKE) Sweeden
+
+Francisco, checking carmichael divisors using RSA, is his most relevant contribution to this paper.
+
+
+
+
 
 
