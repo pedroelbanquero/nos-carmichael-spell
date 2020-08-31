@@ -565,7 +565,7 @@ If you have a place with some KW of energy we are glad to build the computer in 
 
 If you have a super computer we are glad to do experiemnts toguether.
 
-We are a small group of geeks without resources, if you want to collaborate in economical aspects for the investigation you can make a donation here .
+We are a small group of geeks without resources
 
 
 # Authors
