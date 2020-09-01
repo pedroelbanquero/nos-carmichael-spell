@@ -587,7 +587,8 @@ No more factors after some minutes.
 
 ````
 
-We can see how big numbers who we can't factorize we can decrypt because his period expansion cross near N^2
+We can see how big numbers who we can't factorize we can decrypt because his period expansion cross near N^2. In 100 numbers of 512 bits 2 % have the period expansion near n^2
+
 
 
 
