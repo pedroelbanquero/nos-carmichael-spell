@@ -372,7 +372,7 @@ To calculate decimal expansion distances of squares. The nos santos field. The X
 ## nsZ = n^2 - NSIF(n,e,x)
 
 
-## Example and proof of a field englobes a group of period , carmichaels or totient (private keys), and same nnumbers can be found in diferent fields.
+## Example and proof of a field englobes a group of period , carmichaels or totient (private keys), and same numbers can be found in diferent fields.
 
 Just one operation to decrypt messages, one quadratic more to factorize, one more to calculate the decimal expansion of N, with the same "KEY" for all group.
 
@@ -469,7 +469,7 @@ The probability to decrypt rsa are de multiples of carmichael divisors when is a
 
 
 
-## Prood more numbers from 0 to N who decrypts a message than factorize a number
+## Proof more numbers from 0 to N who decrypts a message than factorize a number
 
 Calculate numbers who decrypts a message from 0 to N
 
