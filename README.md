@@ -597,7 +597,7 @@ We are working in a GPU CUDA bruteforce algorithm, cooming soon published, with 
 
 # License
 
-Free usage on Apache License 2.0 for non for commercial uses, you can't win money with this paper or derivates. Just redistribute derivates for free.
+Free usage on Apache License 2.0 for non commercial uses, you can't win money with this paper or derivates. Just redistribute derivates for free.
 
 If some formula dosen't exists  you need to use a mention of the authors
 To discuss with the team for commercial porpouses, you can send email to pedro@blackhole.consulting . 
