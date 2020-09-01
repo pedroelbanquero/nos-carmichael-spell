@@ -587,7 +587,7 @@ Functions and Performance Haskell and Maths
 
 Co-Author - My master, Enrique S., Physhicist, Maths, Computer Science (MathMax) Spain
 
-Enrique help me to develop all functions and explain me how rsa works and all that i know about maths and cryptografy. He was investigating factorization more than 8 years.
+Enrique help me to develop all functions and explain me how rsa works and all that i know about maths and cryptografy. 
 
 Co-Author - Francisco Blas Izquierdo, Hacker, Ph.D. student, Chalmers University of Technology" (KLONDIKE) Sweeden
 
