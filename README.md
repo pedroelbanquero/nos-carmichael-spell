@@ -264,13 +264,15 @@ The spell show how easy is to solve faster many numbers than the factorization f
 
 For all products of primes who have the same proportion of n - sum factors in n^2 it is significantly easier to calculate a private key to decrypt a message.
 
-The spells proves that find and decrypt with a public key and Nos Carmichael spell is faster than factorizing just one of the numbers, if you just want to decrypt a message you can use the Nos Carmichael spell if the number is "vulnerable", just in 0.01 seconds vs 255 seconds to factorize the number with the parallel ECM method.
+When a multiple of carmichael is near n^2 is more easy decrypt than factorize.
 
-Clearly in trillions of cases you can decrypt or solve rsa significantly faster than the current fastest factorization methods like GNFS or ECM when (p * q) are
+The spells proves that find and decrypt with a public key and NSIF is faster than factorizing just one of the numbers, if you just want to decrypt a message you can use the NSIF if the number is "vulnerable", just in 0.01 seconds vs 255 seconds to factorize the number with the parallel ECM method.
+
+Clearly in trillions of cases you can decrypt or solve rsa significantly faster than the current fastest factorization methods like GNFS or ECM when (p * q) are 
 
 ## n^2 - NSIF(e,x) mod T = 0
 
-Many keys are vulnerable to find the message deciphered in just one operation, and some operations more to factorize the number if you can factorize the NSS derivation. 
+Many keys are vulnerable to find the message deciphered in just one operation, and some operations more to factorize the number if you can factorize the NSIF derivation. 
 
 Just some seconds to get keys of 512, 1024, 2048 and 4096 bits vulnerable to the Nos-Santos-Izquierdo Field
 
