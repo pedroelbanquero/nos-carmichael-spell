@@ -37,9 +37,9 @@ import Math.NumberTheory.Powers.Squares
 
 
 -- COMPUTE CARMICHAEL DERIVATION
--- requiere n as a first parameter a odd number prime less to buid the ramifications of the prime waves.
+-- requiere n as a first .
 
-nsf n s = (n^(2) -1) -s
+nsf n s = (n^(2) - 1) -s
 
 
 -- EXTRACT PRIVATE KEY WITH EXPONEN ANT N IN NSS NUMBERS 
@@ -97,7 +97,7 @@ sum_factors n = n + 1 - (totient n)
 
 
 
--- Efficient way to calculate decimal expansion
+-- Efficient way to calculate decimal expansion in semiprime numbers
 
 -- With P Q
 tpq p q = out
@@ -107,7 +107,7 @@ tpq p q = out
 	out = (lcm tp tq)
 
 
--- With N
+-- With N and ECM 
 tn n = tp
 	where
 	c = carmichael n
@@ -124,6 +124,15 @@ div_until_mod_1 p last
 
 
 
+field_crack n s
+	| s > 1000000= (0,0) 
+	| t == 0 = out
+	| otherwise = field_crack n (s+1)
+	where
+	s2 = (s*s)
+	t = tryperiod n (div (n^2-s2) 2)
+	out = (n, s)
+
 
 -- Decimal expansion in a traditional slow way
 period n = (length (takeWhile (/=1) $ map (\x -> powMod 10 x n ) ( tail [0,1..n])) ) +1
@@ -134,7 +143,7 @@ period n = (length (takeWhile (/=1) $ map (\x -> powMod 10 x n ) ( tail [0,1..n]
 alldecnss n = filter (\(c)-> tryperiod n (n^2) == 0 || tryperiod n (n^2 - c-1)==0 || tryperiod n (n^2 + c-1) == 0 ) $ (tail [0,3..n])
 
 
-alldec2 n = take 1000 $ filter (\(z,y) -> y == 0 ) (map (\x-> (x , tryperiod n ((x^2) + (x*6))) ) (reverse [1..n]))
+alldec2 n = take 1000 $ filter (\(z,y) -> y == 0 ) (map (\x-> (x , tryperiod n ((x^2) - (x*6))) ) (reverse [1..n]))
 
 
 alldec n = filter (\(z,y) -> y == 0) (map (\x->(x,tryperiod n x)) [1..n])
