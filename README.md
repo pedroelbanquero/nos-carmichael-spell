@@ -500,7 +500,7 @@ Calculate numbers who decrypts a message from 0 to N
 As wikipedia say .... Rivest, Shamir, and Adleman noted[2] that Miller has shown that – assuming the truth of the Extended Riemann Hypothesis – finding d from n and e is as hard as factoring n into p and q (up to a polynomial time difference).However, Rivest, Shamir, and Adleman noted, in section IX/D of their paper, that they had not found a proof that inverting RSA is equally as hard as factoring. ... 
 
 
-Calculate numbers from 0 to N , (P + Q)
+Calculate numbers from 0 to N , who have common factors p or q, (P + Q)
 
 *Libs.Events> rsigma 377
 
@@ -532,7 +532,7 @@ Calculate numbers from 0 to N , (P + Q)
 
 When the primes are weak (with small period) you have a lot more probabilities than in factorization to decrypt the message.
 
-To me seems clear you don't have the same probabilities. And are linked to different things, the error was than carmichael always is calculated with p or 1 -1 and no with the real period in decimal expansion. Because many primes have strong period like reptend primes, and others no. Who generate more or less posibilities , liki the opposite case when the factors are small in order to N like 2049 you can observe is more easy find a numnber who factorize than decrypt a message.
+Seems clear in some cases you have mor multiples who gcd n multiple = factor is more probable, and others is more probable decrypt befor find a multiple with common factor from 0 to N. 
 
 
 *Libs.Events> rsigma 2049
