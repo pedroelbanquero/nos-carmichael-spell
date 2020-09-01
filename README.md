@@ -16,7 +16,7 @@ The NSIF method is an efficient way to calculate the N decimal expansion, for se
 
 The NSIF method allows calculating the sum of factors in a efficient way, without knowing the prime factors, when the product of primes are in the field.
 
-The NSIF method improves factorization methods for the majority of small numbers and a significant percentage of large numbers.
+The NSIF method can improves factorization methods for the majority of small numbers and a significant percentage of large numbers. When the period expansion is near n^2
 
 The NSIF method proofs factorization and decrypt a message with RSA are diferent problems, depending N is more fast factorize or decrypt a message.
 
