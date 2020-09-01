@@ -146,7 +146,7 @@ nsf_find nbits range to = take to $ filter (\(v,c)-> length c==2) (map (\x-> (x,
 nsf_map_nsq s x r =  filter (\(d)-> snd (integerSquareRootRem d) /= 0 ) (nsf_map s x r) 
 
 
--- CHECK PERIOD LENGTH FOR N Using RSA
+-- CHECK PERIOD LENGTH FOR N Using RSA, encrypt and decrypt to check the field, period is is n^2 - NSIF(e,x)
 tryperiod n period = (powMod (powMod (2) 1826379812379156297616109238798712634987623891298419 n) (modular_inverse 1826379812379156297616109238798712634987623891298419 period) n) - (2) 
 
 -- GET DIVISORS WITH ECM METHOD
