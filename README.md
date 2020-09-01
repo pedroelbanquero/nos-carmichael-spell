@@ -639,6 +639,7 @@ Co-Author - Francisco Blas Izquierdo, Hacker, Ph.D. student, Chalmers University
 Francisco, checking carmichael divisors using RSA, is his most relevant contribution to this paper.
 
 
+updated doc in https://github.com/pedroelbanquero/nos-carmichael-spell/blob/master/README.md
 
 
 
