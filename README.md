@@ -311,7 +311,7 @@ The numbers can stay in didferent Period Fields at the same time. Because differ
 
 ![Sum of factors](nss_fields.png)
 
-All numbers in a nos santos field can be factorized just by one operation. Each image represents  the numbers who can by decripted in each field, with the same field you can decrypt all different numbers, the image is in a small scale to understad how it works.
+All numbers in a field can be decrypted just by one operation knowing the field. Each image represents  the numbers who can by decripted in each field, with the same field you can decrypt all different numbers, the image is in a small scale to understad how it works.
 
 All numbers can be explained as :
 
