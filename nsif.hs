@@ -5,7 +5,7 @@
 --  Enrique Santos
 --  Vicent Nos
 
-module Nss where
+module Nsif where
 
 import System.Environment
 import System.Exit
@@ -68,8 +68,6 @@ nsf_factorise n t= (sg2-qrest, sg2+qrest)
 
 -- N bits mapping
 
---for strong nss
-
 nsf_map s x r= map fst (filter (\(x,c)-> c==0) $ map (\x-> (x,tryperiod x (nsf x r))) ([2^s..2^s+x]))
 
 
@@ -124,14 +122,46 @@ div_until_mod_1 p last
 
 
 
+field_crack2 n s
+	-- | mod n 3 == 0 = (0,0)
+	-- | mod n 2 == 0 = (0,0)
+	| s > 10000= (0,0) 
+	| t == 0 = out
+	| otherwise = field_crack2 n (s+1)
+	where
+	t = tryperiod n (n-s*6)
+	out = (n, s)
+
 field_crack n s
-	| s > 1000000= (0,0) 
+	| s > 10000= (0,0) 
 	| t == 0 = out
 	| otherwise = field_crack n (s+1)
 	where
 	s2 = (s*s)
 	t = tryperiod n (div (n^2-s2) 2)
 	out = (n, s)
+
+
+cypher m n = powMod m 65537 n
+
+
+
+nsif_decrypt m n s = out
+	where
+	s2 = (s*s)
+	dev = div ((n*s)^2-s2) 2
+	dcr = powMod m (modular_inverse 65537 dev) n
+	out = (dcr,dev)
+
+	
+
+
+loadkeys = do 
+
+	a<-readFile "pubkeystest.txt"
+	let c=S2.splitOn "\n" a
+	let ns=map (\x->read x::Integer) (filter (/="") c)
+	return $ ns
 
 
 -- Decimal expansion in a traditional slow way
