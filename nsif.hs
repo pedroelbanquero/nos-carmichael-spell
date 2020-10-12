@@ -120,26 +120,29 @@ div_until_mod_1 p last
 	(dp,mp) = divMod (p) 2
 	period = powMod 10 dp (p+1)
 
+pr = map (primes !!) [1..1000]
 
+prs = nub $ sort ( concat (map (\x-> map (\y -> x*y) pr) pr ) )
 
 field_crack2 n s
 	-- | mod n 3 == 0 = (0,0)
 	-- | mod n 2 == 0 = (0,0)
-	| s > 10000= (0,0) 
+	| s > 1000000= (0,0) 
 	| t == 0 = out
 	| otherwise = field_crack2 n (s+1)
 	where
-	t = tryperiod n (n-s*6)
+	t = tryperiod n ((n)-s)
 	out = (n, s)
 
 field_crack n s
-	| s > 10000= (0,0) 
+	| s > 100000 = (0,0,0) 
 	| t == 0 = out
 	| otherwise = field_crack n (s+1)
 	where
 	s2 = (s*s)
-	t = tryperiod n (div (n^2-s2) 2)
-	out = (n, s)
+	car = (div (n^2-s2) 2)
+	t = tryperiod n car
+	out = (n, s, car)
 
 
 cypher m n = powMod m 65537 n
@@ -154,6 +157,7 @@ nsif_decrypt m n s = out
 	out = (dcr,dev)
 
 	
+
 
 
 loadkeys = do 
