@@ -36,7 +36,7 @@ These spells are from famous math researchers, including Fermat. Euler. Carmicha
 
   - Decrypt
 
-    mc = powMod
+    mc = powMod mc d n = m
   
 - Other known formulas
 
