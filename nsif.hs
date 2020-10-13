@@ -81,7 +81,7 @@ nsf_map_nsq s x r =  filter (\(d)-> snd (integerSquareRootRem d) /= 0 ) (nsf_map
 
 
 -- CHECK PERIOD LENGTH FOR N Using RSA
-tryperiod n period = (powMod (powMod (2^32) 1826379812379156297616109238798712634987623891298419 n) (modular_inverse 1826379812379156297616109238798712634987623891298419 period) n) - (2^32) 
+tryperiod n period = (powMod (powMod (2) 1826379812379156297616109238798712634987623891298419 n) (modular_inverse 1826379812379156297616109238798712634987623891298419 period) n) - (2) 
 
 
 -- GET DIVISORS WITH ECM METHOD
@@ -128,7 +128,7 @@ prs = nub $ sort ( concat (map (\x-> map (\y -> x*y) pr) pr ) )
 field_crack2 n s
 	-- | mod n 3 == 0 = (0,0)
 	-- | mod n 2 == 0 = (0,0)
-	| s > 1000000= (0,0) 
+	| s > 10000= (0,0) 
 	| t == 0 = out
 	| otherwise = field_crack2 n (s+1)
 	where
@@ -136,7 +136,7 @@ field_crack2 n s
 	out = (n, s)
 
 field_crack n s
-	| s > 100000 = (0,0,0) 
+	| s > 10000 = (0,0,0) 
 	| t == 0 = out
 	| otherwise = field_crack n (s+1)
 	where
@@ -144,6 +144,10 @@ field_crack n s
 	car = (div (n^2-s2) 2)
 	t = tryperiod n car
 	out = (n, s, car)
+
+
+
+factof n = (map (\x-> read ((splitOn " " ( show (fst x))) !! 1)::Integer) (P.factorise n))
 
 
 cypher m n = powMod m 1826379812379156297616109238798712634987623891298419 n
